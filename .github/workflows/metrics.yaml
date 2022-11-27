@@ -36,6 +36,7 @@ jobs:
           plugin_stackoverflow_lines: 4
           plugin_stackoverflow_lines_snippet: 2
           plugin_stackoverflow_user: 20554409
+          plugin_stackoverflow_sections: false
 
           plugin_wakatime: yes
           plugin_wakatime_days: 7
@@ -58,4 +59,3 @@ jobs:
           plugin_introduction_title: yes
 
           plugin_sponsors: yes
-          plugin_sponsors_past: yes
