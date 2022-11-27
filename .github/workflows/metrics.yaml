@@ -42,7 +42,21 @@ jobs:
           plugin_wakatime_days: 7
           plugin_wakatime_limit: 5
           plugin_wakatime_repositories_visibility: public
-          plugin_wakatime_sections: time, projects-graphs, languages, languages-graphs
+          plugin_wakatime_sections: time, languages, languages-graphs
           plugin_wakatime_url: https://wakatime.com
           plugin_wakatime_user: current
           plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+
+      - name: sponsorship
+        id: sponsorship 
+        uses: lowlighter/metrics@latest
+        with:
+          filename: sponsorship.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+
+          plugin_introduction: yes
+          plugin_introduction_title: yes
+
+          plugin_sponsors: yes
+          plugin_sponsors_past: yes
