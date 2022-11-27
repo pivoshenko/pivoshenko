@@ -30,7 +30,7 @@ jobs:
 
           # Options
           user: volopivoshenko
-          template: classic
+          template: markdown
           base: header, activity, community, repositories, metadata
           config_timezone: Europe/London
           plugin_achievements: yes
