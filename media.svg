@@ -219,7 +219,7 @@
                                     </defs>
                                     <svg xmlns="http://www.w3.org/2000/svg" class="gauge info">
                                         <circle class="gauge-base" r="25" cx="28" cy="28"/>
-                                        <circle class="gauge-arc" transform="rotate(-90 28 28)" r="25" cx="28" cy="28" stroke-dasharray="80.6827515400411 155"/>
+                                        <circle class="gauge-arc" transform="rotate(-90 28 28)" r="25" cx="28" cy="28" stroke-dasharray="80.89493497604383 155"/>
                                     </svg>
                                     <svg xmlns="http://www.w3.org/2000/svg" mask="url(#mask)">
                                         <g xmlns="http://www.w3.org/2000/svg" transform="translate(5 4)" fill="none" fill-rule="evenodd">
@@ -293,7 +293,7 @@
                                     </defs>
                                     <svg xmlns="http://www.w3.org/2000/svg" class="gauge info">
                                         <circle class="gauge-base" r="25" cx="28" cy="28"/>
-                                        <circle class="gauge-arc" transform="rotate(-90 28 28)" r="25" cx="28" cy="28" stroke-dasharray="40.78947368421053 155"/>
+                                        <circle class="gauge-arc" transform="rotate(-90 28 28)" r="25" cx="28" cy="28" stroke-dasharray="32.63157894736842 155"/>
                                     </svg>
                                     <svg xmlns="http://www.w3.org/2000/svg" mask="url(#mask)">
                                         <g stroke-linecap="round" stroke-width="2" fill="none" fill-rule="evenodd">
@@ -318,12 +318,12 @@
                                 <div class="title">
                                     <span class="prefix"></span>
                                     Developer
-                                    <span class="gh">ranked 8.35m out of 112m users</span>
+                                    <span class="gh">ranked 9.64m out of 112m users</span>
                                     <div class="value-wrapper">
-                                        <div class="value">6</div>
+                                        <div class="value">5</div>
                                     </div>
                                 </div>
-                                <div class="text">Published 6 public repositories</div>
+                                <div class="text">Published 5 public repositories</div>
                             </div>
                         </div>
                         <div class="achievement c largeable-width-half">
@@ -437,7 +437,7 @@
                                 <div class="title">
                                     <span class="prefix"></span>
                                     Maintainer
-                                    <span class="gh">ranked 984k out of 391m repositories</span>
+                                    <span class="gh">ranked 985k out of 391m repositories</span>
                                     <div class="value-wrapper">
                                         <div class="value">21</div>
                                     </div>
@@ -576,7 +576,7 @@
                                 <div class="title">
                                     <span class="prefix"></span>
                                     Inspirer
-                                    <span class="gh">ranked 4.66m out of 391m repositories</span>
+                                    <span class="gh">ranked 4.72m out of 391m repositories</span>
                                     <div class="value-wrapper">
                                         <div class="value">1</div>
                                     </div>
