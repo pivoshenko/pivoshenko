@@ -1,11 +1,12 @@
 # Visit https://github.com/lowlighter/metrics#-documentation for full reference
+
 name: Metrics
 
 on:
-  schedule: [{ cron: "0 9 * * *" }]
+  schedule: [ { cron: "0 9 * * *" } ]
 
   workflow_dispatch:
-  push: { branches: ["main"] }
+  push: { branches: [ "main" ] }
 
 jobs:
   github-metrics:
@@ -15,7 +16,7 @@ jobs:
     steps:
 
       - name: achievements
-        id: achievements 
+        id: achievements
         uses: lowlighter/metrics@latest
         with:
           filename: media.svg
@@ -48,7 +49,7 @@ jobs:
           plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
 
       - name: sponsorship
-        id: sponsorship 
+        id: sponsorship
         uses: lowlighter/metrics@latest
         with:
           filename: sponsorship.svg
@@ -65,7 +66,7 @@ jobs:
           plugin_topics_mode: icons
 
       - name: general
-        id: general 
+        id: general
         uses: lowlighter/metrics@latest
         with:
           filename: general.svg
@@ -95,15 +96,15 @@ jobs:
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
 
-      - name: anime
-        id: anime 
-        uses: lowlighter/metrics@latest
-        with:
-          filename: anime.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
+      # - name: anime
+      #   id: anime
+      #   uses: lowlighter/metrics@latest
+      #   with:
+      #     filename: anime.svg
+      #     token: ${{ secrets.METRICS_TOKEN }}
+      #     base: ""
 
-          plugin_anilist: yes
-          plugin_anilist_sections: characters
-          plugin_anilist_limit_characters: 22
-          plugin_anilist_user: volopivoshenko
+      #     plugin_anilist: yes
+      #     plugin_anilist_sections: characters
+      #     plugin_anilist_limit_characters: 22
+      #     plugin_anilist_user: volopivoshenko
