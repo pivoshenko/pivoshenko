@@ -23,8 +23,8 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
 
-          plugin_achievements: yes
-          plugin_achievements_display: compact
+          # plugin_achievements: yes
+          # plugin_achievements_display: compact
 
           plugin_leetcode: yes
           plugin_leetcode_limit_recent: 2
