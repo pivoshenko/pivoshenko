@@ -19,7 +19,7 @@ jobs:
           filename: github.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: header, activity, community, repositories, metadata
-          config_order: base, introduction, notable, languages, topics
+          config_order: base, introduction, notable, languages
 
           user: volopivoshenko
           template: classic
@@ -45,10 +45,6 @@ jobs:
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
 
-          plugin_topics: yes
-          plugin_topics_limit: 0
-          plugin_topics_mode: icons
-
           plugin_notable: yes
           plugin_notable_from: all
           plugin_notable_repositories: yes
@@ -61,7 +57,7 @@ jobs:
           filename: social.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
-          config_order: leetcode, wakatime, stackoverflow
+          config_order: leetcode, wakatime, stackoverflow, topics
 
           plugin_wakatime: yes
           plugin_wakatime_days: 7
@@ -84,6 +80,10 @@ jobs:
           plugin_stackoverflow_lines_snippet: 2
           plugin_stackoverflow_sections: ""
           plugin_stackoverflow_user: 20554409
+
+          plugin_topics: yes
+          plugin_topics_limit: 0
+          plugin_topics_mode: icons
 
       - name: media
         id: media
