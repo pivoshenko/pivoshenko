@@ -2,3 +2,5 @@
 
 [<img align="left" width="390" alt="github" src="github.svg">](#)
 [<img align="right" width="390" alt="social" src="social.svg">](#)
+
+[<img align="left" width="390" alt="media" src="media.svg">](#)
