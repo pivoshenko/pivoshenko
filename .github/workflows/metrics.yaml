@@ -19,7 +19,7 @@ jobs:
           filename: github.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: header, activity, community, repositories, metadata
-          config_order: introduction, notable, languages, topics
+          config_order: base, introduction, notable, languages, topics
 
           user: volopivoshenko
           template: classic
