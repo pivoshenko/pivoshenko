@@ -4,6 +4,4 @@
 [<img align="right" width="390" alt="social" src="social.svg">](#)
 
 [<img align="left" width="390" alt="media" src="media.svg">](#)
-
 [<img align="right" width="390" alt="tracks" src="tracks.svg">](#)
-[<img align="right" width="390" alt="artists" src="artists.svg">](#)
