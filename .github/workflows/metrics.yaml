@@ -85,11 +85,11 @@ jobs:
           plugin_topics_limit: 0
           plugin_topics_mode: icons
 
-      - name: media
-        id: media
+      - name: anime
+        id: anime
         uses: lowlighter/metrics@latest
         with:
-          filename: media.svg
+          filename: anime.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
 
@@ -99,11 +99,11 @@ jobs:
           plugin_anilist_limit: 2
           plugin_anilist_limit_characters: 22
 
-      - name: tracks
-        id: tracks
+      - name: music
+        id: music
         uses: lowlighter/metrics@latest
         with:
-          filename: tracks.svg
+          filename: music.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
 
@@ -112,3 +112,15 @@ jobs:
           plugin_music_mode: recent
           plugin_music_token:  "${{ secrets.SPOTIFY_CLIENT_ID }}, ${{ secrets.SPOTIFY_CLIENT_SECRET }}, ${{ secrets.SPOTIFY_REFRESH_TOKEN }}"
           plugin_music_limit: 10
+
+      - name: steam
+        id: stean
+        uses: lowlighter/metrics@latest
+        with:
+          filename: steam.svg
+          token: NOT_NEEDED
+          base: ""
+
+          plugin_steam: yes
+          plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
+          plugin_steam_user: ${{ secrets.STEAM_USER_ID }}
