@@ -155,32 +155,32 @@
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                                 <path d="M3.217 6.962A3.75 3.75 0 0 1 0 3.25v-.5C0 1.784.784 1 1.75 1h1.356c.228-.585.796-1 1.462-1h6.864c.647 0 1.227.397 1.462 1h1.356c.966 0 1.75.784 1.75 1.75v.5a3.75 3.75 0 0 1-3.217 3.712 5.014 5.014 0 0 1-2.771 3.117l.144 1.446c.005.05.03.12.114.204.086.087.217.17.373.227.283.103.618.274.89.568.285.31.467.723.467 1.226v.75h1.25a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5H4v-.75c0-.503.182-.916.468-1.226.27-.294.606-.465.889-.568.139-.048.266-.126.373-.227.084-.085.109-.153.114-.204l.144-1.446a5.015 5.015 0 0 1-2.77-3.117ZM4.5 1.568V5.5a3.5 3.5 0 1 0 7 0V1.568a.068.068 0 0 0-.068-.068H4.568a.068.068 0 0 0-.068.068Zm2.957 8.902-.12 1.204c-.093.925-.858 1.47-1.467 1.691a.766.766 0 0 0-.3.176c-.037.04-.07.093-.07.21v.75h5v-.75c0-.117-.033-.17-.07-.21a.766.766 0 0 0-.3-.176c-.609-.221-1.374-.766-1.466-1.69l-.12-1.204a5.064 5.064 0 0 1-1.087 0ZM13 2.5v2.872a2.25 2.25 0 0 0 1.5-2.122v-.5a.25.25 0 0 0-.25-.25H13Zm-10 0H1.75a.25.25 0 0 0-.25.25v.5c0 .98.626 1.813 1.5 2.122Z"/>
                                             </svg>
-                                            6 / 44 achievements unlocked
+                                            8 / 44 achievements unlocked
                                         </div>
                                     </div>
                                     <div class="achievement">
-                                        <img src="data:image/jpg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAgACADASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABQcABAYI/8QAKxAAAgEDBAECBQUBAAAAAAAAAQIDBAURAAYxQSESEwcVQlFSFCIjYYFx/8QAGAEAAwEBAAAAAAAAAAAAAAAAAAMEAgX/xAAiEQABBAAGAwEAAAAAAAAAAAABAAIDEQQhMUFC8BIiMmH/2gAMAwEAAhEDEQA/AOXKejqamOR6enllSMZcohYKPuccaa/w/wBoR2GKnvd9iV7m4ElHRyAEU4PlZZQfq7VDxyehq38MrdS2Chki3M1PG9cvuCL0t7tMvpyvuFTkB/x5HgnGdEL+bPUKJbWas1DkNKXZmjPjr1ec8aVM71ppoqzAx3KDIy291/EE35tGHcME162+ifNVBkraOEftnx5MsQH1dsg55HY0oNOGiapo5lnSoaKRGDJ7ZwQQfBzqhvDbUW4o5bpZoVjvSAvV0Ua4FSB5MsSjh+2Qc8r2NYik4uNp2MwussbaG47sg+2btDeZIqG7TGKu8JDVHH832SQn6ug3+Ho60KzUlLUS0k0cuQ3tF5WOYyDgnwcY/rGlJrb7cusV5eGiukoSvBVIah2wJl4COemxwx/4ejqppzzXLf8ANNCNrI7Sfo3Z8yMFX0KWIzx47znHjQjcF7+Se7RW2oElyOVnqozkQDgpGfyPBbrgdnU3Ne47SXo7ZIGuLJ6KioRsiDxgxoe26Lf4OzrCaHEcUAuIHmbpf//Z" alt="" />
+                                        <img src="data:image/jpg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAgACADASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAABwQFCAb/xAArEAACAQMDAgUDBQAAAAAAAAABAgMEBREGITEAEgcTMkFhUXGBFSNSkaH/xAAYAQADAQEAAAAAAAAAAAAAAAABAwQAAv/EACERAAICAAYDAQAAAAAAAAAAAAECAAMREiFRYYETFDFB/9oADAMBAAIRAxEAPwDKnTD4aaGFFJRXS9U6SXKoKm30E2AqZ9MsoO3yqHnk7YBiaB0rSWeOG86iSN65gJKOgkGQgO4llH+qh55O2AVjTdtp7uBV1VbMlZMGqIpeSpDhQ5z6t85+CPr0h3LNkXuX00LXX7F3Q3PPEMfErQ61xqrrZIY47lCWa4UEOCr49UsIG3yyDjkbZAH+tQat09Hahba+3VdQkrVCo0jv3MjkZ8zYZGWD/fH9m3iDo+O4vUXGyRxrc4k82toYQO2RcZM0QG3yyDjkbZAKOQcjTm+lXXzVDT9G2/UrtFaojrClvvLIansaOnqZNw5KkKjknkHHax44O2MIlpr1tVplnr7xXU8FLUinFHE5DqzDuOxBwuQdhvn346zr0iaW1SbnajYLvOqFnDwzsB+6yr2pHI3tjbDfg7cMChTjJmdnQIeuIlapvbXSpp7dSVM9VTqPNCGTvDMwBVs4BbYlQPbtPR5rnVcVvqKu36ekUSuzrNUwjAjUk5jjI+Ni34G2Say+339Hp5rba5lNZKvZVVERyEHvGh+v8mH2G254frMgLYwrewqCDT7jP//Z" alt="" />
                                         <div>
                                             <div class="name">
-                                                <div>Operation Chaos</div>
+                                                <div>Desperate Measures</div>
                                                 <div class="unlocked">19 Sept 2023</div>
                                             </div>
-                                            <div class="description">Complete Operation Chaos in Campaign on any difficulty.</div>
+                                            <div class="description">Complete Desperate Measures in Campaign on any difficulty.</div>
                                         </div>
                                     </div>
                                     <div class="achievement">
-                                        <img src="data:image/jpg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAgACADASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAABgcIAQIE/8QALBAAAQMCBQMDAwUAAAAAAAAAAQIDBAURAAYhMUESE0IHUVIVcYEjMkNyof/EABcBAAMBAAAAAAAAAAAAAAAAAAEDBAX/xAAlEQABAwIGAQUAAAAAAAAAAAABAAIDBBMREiExQVEUMnGh4fD/2gAMAwEAAhEDEQA/AJUw4PT/ACcigoYrNdZC6qsByHCcTcRwdUuug+XKUHbc8DGuQMoM0Npms11pLlUUA5EhOC4YB1Dro+XKUHbc8DBvltr61XHkzFBLDX6rzz73bDt+Asg6k3ufviWWUuNuPdatJSsY3yKn08Dv98oL9Qcmorjb1YobKUVdILk2E2mwfG5daA8uVIG+45GE9ima8/Fj5lnJpwQwmK4hpIZXoHAkdRSf7f6MLfO9Ch5klS52X2e3WGgVyobabJlW1U6yB5DdSOdVJ5GDDIQbb9whW0rCwVMOgdx19Lnybm5cxtum1JaDMFkx5Dp0c9kLPv7KP2PBw0ku/Q6LIcm08NVCWy8x0zHAWu2CkXU3a5ANiPc6DEyYPstZkXUWm4M99QnoATHeW6pIdA2bUQQAr4q52PBw0Qsz5lIa2WzZ3CNXW2IlIejRUx3qnIkdp6U871lKgb9LSQP3Hq1Ou9hbAXmPMIoyFwKU6k1EgokSm/4QdChB+XClfgcnGM0ZjXAC4cN4qqCrh55LhWI9xZSEE+Z8lfgcnADhjmjHtJbK7AgaY+6//9k=" alt="" />
+                                        <img src="data:image/jpg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAgACADASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABgcFCP/EACsQAAEDAgYBBAAHAAAAAAAAAAECAwQFEQAGEiExQVEHExQiJDIzQkNxof/EABcBAQEBAQAAAAAAAAAAAAAAAAADAgT/xAAfEQACAgEEAwAAAAAAAAAAAAABAgARAwQSMXEhMkH/2gAMAwEAAhEDEQA/AOXabEVPqEaI2tCFvuJaSpZskFRsLnxvhhlXJLq5DkvMUaQzCjuqa+MPq7KdTy2nwkH8y+uBucaeXMjxWqlArMyrpj5ecCX4six95xYufb0JCikpUPsfFiORigZwdDFTqMhualbL8dEiK8F2ACk30o8HXq25337xhyQKXmX06IzXkNAAnuvkAN5HaGa6ZJgRxIor8gCRGkFWqLsVFtwixKSAdKxzbogjE3kqbVIdUyjQ0VEpTe+kX2GOgMvz4rTK58ptU4N05SXW0v6C4VlCCkqA5spXIxPKl6eSJ6ZVTyvZdIbbW8tEh0JXGKf4lKNgo2N0kc2PBFsEJqm5jPjVW3Y/Wger81M3JOaV08opVSc1Ud95CllQuY5B/UQelD/eMOs8KR+GgmOpD1LR8cyCLB9K1rWk2/pVwe74iuKM1nWBV6NSKVWWHW5MZosGoleq1ifb1Jt9kgEg9jkcWxVTRuczjcKi3J0qNQCXKnCVPZqMZQXHaKTqZ2Vus7I3Tv3Ydc4zPU7PtHr7DtCYg/Agw0aojsBYUhTvhQ4Ugi2+xBHe4wMzPmJK4gpNJcWYaNnnyTd83uQB+1u+4HfJ8Algxs3CrSgT/9k=" alt="" />
                                         <div>
                                             <div class="name">
-                                                <div>Echoes of a Cold War</div>
-                                                <div class="unlocked">18 Sept 2023</div>
+                                                <div>Jack of All Trades</div>
+                                                <div class="unlocked">19 Sept 2023</div>
                                             </div>
-                                            <div class="description">Complete Echoes of a Cold War in Campaign on any difficulty.</div>
+                                            <div class="description">Get five kills each with an LMG, SMG, AR, and Shotgun.</div>
                                         </div>
                                     </div>
                                     <div class="achievement">
                                         <div>
-                                            <div class="description ellipsis">+4 others...</div>
+                                            <div class="description ellipsis">+6 others...</div>
                                         </div>
                                     </div>
                                 </div>
