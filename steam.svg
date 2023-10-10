@@ -39,7 +39,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                 <path d="m.427 1.927 1.215 1.215a8.002 8.002 0 1 1-1.6 5.685.75.75 0 1 1 1.493-.154 6.5 6.5 0 1 0 1.18-4.458l1.358 1.358A.25.25 0 0 1 3.896 6H.25A.25.25 0 0 1 0 5.75V2.104a.25.25 0 0 1 .427-.177ZM7.75 4a.75.75 0 0 1 .75.75v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5A.75.75 0 0 1 7.75 4Z"/>
                             </svg>
-                            25 hours played
+                            26 hours played
                         </div>
                     </section>
                 </div>
@@ -155,24 +155,24 @@
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                                 <path d="M3.217 6.962A3.75 3.75 0 0 1 0 3.25v-.5C0 1.784.784 1 1.75 1h1.356c.228-.585.796-1 1.462-1h6.864c.647 0 1.227.397 1.462 1h1.356c.966 0 1.75.784 1.75 1.75v.5a3.75 3.75 0 0 1-3.217 3.712 5.014 5.014 0 0 1-2.771 3.117l.144 1.446c.005.05.03.12.114.204.086.087.217.17.373.227.283.103.618.274.89.568.285.31.467.723.467 1.226v.75h1.25a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5H4v-.75c0-.503.182-.916.468-1.226.27-.294.606-.465.889-.568.139-.048.266-.126.373-.227.084-.085.109-.153.114-.204l.144-1.446a5.015 5.015 0 0 1-2.77-3.117ZM4.5 1.568V5.5a3.5 3.5 0 1 0 7 0V1.568a.068.068 0 0 0-.068-.068H4.568a.068.068 0 0 0-.068.068Zm2.957 8.902-.12 1.204c-.093.925-.858 1.47-1.467 1.691a.766.766 0 0 0-.3.176c-.037.04-.07.093-.07.21v.75h5v-.75c0-.117-.033-.17-.07-.21a.766.766 0 0 0-.3-.176c-.609-.221-1.374-.766-1.466-1.69l-.12-1.204a5.064 5.064 0 0 1-1.087 0ZM13 2.5v2.872a2.25 2.25 0 0 0 1.5-2.122v-.5a.25.25 0 0 0-.25-.25H13Zm-10 0H1.75a.25.25 0 0 0-.25.25v.5c0 .98.626 1.813 1.5 2.122Z"/>
                                             </svg>
-                                            9 / 50 achievements unlocked
+                                            14 / 50 achievements unlocked
                                         </div>
                                     </div>
                                     <div class="achievement">
-                                        <img src="data:image/jpg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAgACADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAABQYHA//EACsQAAIBAwQBAwMEAwAAAAAAAAECAwQFEQASIUEGBxMxIlFhFTJCcYGh8P/EABkBAAIDAQAAAAAAAAAAAAAAAAACAQMEBf/EABsRAAIDAQEBAAAAAAAAAAAAAAECAAMREhMh/9oADAMBAAIRAxEAPwCa+O0MlbVw0lOyiondUUM2AWPHJ6/vRm82WazVgp53gmVkEiSwvuR1PwQeO89aYvR+0UVZfkqKqm92opgJIVkICArn6uPkg44PHeDpz9Q7PBUTUc81TQ0nuQsRDLIsQBDYO0dDvHwCTg863AKV2c03Y/JkooLXJX1sixxMyJHlwc4X88da1tvjH6rdoraXi3M43u5O1Vz98f8Ad6pnp3Yykt1YVluuBpjFJHTxuZhHK2QHJAGRjIwCQfzxpZ8uWp8Y8tugltctUiuktOGHtwv9XIb+TJtJxtIIKjOjlc0w9TpAmvp3dobFcVm3hacttkRV2gKeDz0e/wCwNMnqVDS1lxoHaaOVhAYt+c7sMeSc85BGpd4XWxVd5o4JgPb95N2TxgHOP9af/K6uknuiSNOhBjVUQDhQB9h3nPWrK0BX5EsbmwQl6eUtNSXaRQFHuRAKRxkq6sMYPWCdKnmVXcJLtU1VzeSefcYwSm7aoY/T1jnRrx27U9Fco5nRhHFypcH9w/HHB+ND/LLylylrHjiVFnYsqseQf8ahkwZGV9bcn//Z" alt="" />
+                                        <img src="data:image/jpg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAgACADASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAABQQGBwj/xAAsEAABAwMDAgUDBQAAAAAAAAABAgMEBREhAAYSFDETIjJBUQcjYVJicZGx/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwQB/8QAIREAAgECBgMAAAAAAAAAAAAAAQIAAxEEITFBYfASUcH/2gAMAwEAAhEDEQA/AOj33mm+KVkclEhCSRdRAubfONQEyFreIVHUlr9QzY6zncsypTPq3tVuM0vpKaViQbCyVPNLUb3/AGIH96FH1gcm71jxKU0+7BW+mG2ypCAl9ZuPELlyUjsQAOwzoURn0O15SSE1ln3VuSfDrbzUQI6ZgcbEYJI9R9zk9vxoreO8Ke/QkMQXHi68bO+I0U2CRci4xk299Ta9wkzHHVt+s5JGf51RKu2h6o9BBLZ8FIWtAIuRbFx+f81mHbybOJXySHS9/VBqXUH6cYz9ZlSpKWn1WKU+Xhyt2slpk2vjz9tULbriUJTWXIipUVsJE0rdJUyhRCQ62cFK0kJKVXx2ONHRa/MakjqYLapKQU+Kj7bgB7i4t3+CDpen1qiRWpEZLTAbkoW06iQ0skch78Cm4BN03SbHI1aqJYj33mRM7XB78nRrb9JRDjpcnOynChIU4blbh4i6iACAT3I9r6zibtijSKnOm1OTIL7ziltdOjiW84ssKvhPEWI9j86J2juIOUqPCkyWpciM14SHGV8g4B6RxNik2sMi351K3BUmJDXStRKrBnNeZ5MxISCmxwLYIv8AHxolorTOW8RqrODxP//Z" alt="" />
                                         <div>
                                             <div class="name">
-                                                <div>Following the Footsteps</div>
+                                                <div>4 Bars</div>
                                                 <div class="unlocked">10 Oct 2023</div>
                                             </div>
                                             <div class="description"></div>
                                         </div>
                                     </div>
                                     <div class="achievement">
-                                        <img src="data:image/jpg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAgACADASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAABAADBgcIBf/EACwQAAEDAwMCBQMFAAAAAAAAAAECAwQFESEABhIxQRMUIlFhMmJxBxUjgZH/xAAXAQEBAQEAAAAAAAAAAAAAAAADAAQF/8QAHBEBAAMAAgMAAAAAAAAAAAAAAQACEQMhEkFR/9oADAMBAAIRAxEAPwBifsFmFBjTES23lAp5JICCUnuBflj5Axp+BETSpMuW048lMdAWjy6jycJwEi3UkkD+9TiFujbMrypXCaMnxQgc4uFlScnv0NrXB6HFjfXUcqNGdiKTTGBHcu2suOMJbSfrubdBYWue+PbW/kBDemGWfkyfvCnzolbeNaYZMl5CXgo+oAEYSD9p9Og6bKYZbc5BMd/qgpQAQoElJB9721aX6hVWjRNxrnQ2IVeY/bzDXGSSseJ4hUHQR3Sqw+b6qOpUpMWW/H5tIktqSOLq+BJJH0jINibH21zrUF0Yg56mgdsxdsSolDiGtx1VJyQpTzDRDjoSPtBuBqwqu1taFtmpTBX4i46Q4ykFaSFvJSbNAX9Sri3EfjWLqf5uDVA4z/BIQtSAp5BCSb5BBF/b5/GpLRtqbk3Q7OapcOXMSl3xHEw2ytpBObqV26G3c21cj5PdopdzAgbKYTqmly5rpW6yu7pZPoWskgnIHc2PY5ONLcTNORSabMiOP+ZfW8EhVrFlJKQbDobjrcg/FtGVOhOUhwIkcWZrbYZlwZ6CFJcIIujGSALgHI6i4OotUDKc8o0u6BHZSwm5yMk/4ScajuHmT//Z" alt="" />
+                                        <img src="data:image/jpg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAgACADASIAAhEBAxEB/8QAGQABAQADAQAAAAAAAAAAAAAABQYAAgQH/8QALBAAAQQBAwIFAgcAAAAAAAAAAQIDBBEhAAUSBjETIkFRYRRxByMlQlJykf/EABgBAAIDAAAAAAAAAAAAAAAAAAIDAQQF/8QAHREAAgEFAQEAAAAAAAAAAAAAAQIAAxESITFRcf/aAAwDAQACEQMRAD8Andk3Pb5Igbdu0SFHlSQU+IG+DbjXm4rUD5SbSRyFH76A6v2pnZZbUiEQ2FuFPEDHYnsda/iVvkKX1NEjbShH08KMiO2+CacUQOS0g+gUVca+dcG2b/uMQhTz/wBSQrxYyZCS6nP3xjOD8V66G64gKgB9uZp55McmNvgj/TXUkduCmJJZilKnSS14BXWB56qu/oCOx07tfV0jbnUPbXt7zzvEB4yF8EO2klRKUg+bxFE3fbGLrUCredznbqqU/NJWSp1S3aSE0CSTQ+OwGrGbu36hJiFPF5jiVUuwoKFpNZKTVWCTk+1alWcb4YphTPCZ531BKaUmKFc21urU+6kgKCbOeBAwDnHaxpV2E5KjeKjCXQKQf2m9cE5mFIS0IzCGU+SwgEAK45oE++riGpmLBZS6AClIuxea06nT1uVnqm+oBDjLYacTyLSXkFp8BIPJNg1R9LA/zGmGHJEtTvN9h95RCy840QT/AF/jjFjBrQu7PpTJJaNo5X7g6yfvfMMOA/nIbS2UcT2SMG/se3x86JkEEOZ//9k=" alt="" />
                                         <div>
                                             <div class="name">
-                                                <div>Dust to Dust</div>
+                                                <div>Pied Piper</div>
                                                 <div class="unlocked">10 Oct 2023</div>
                                             </div>
                                             <div class="description"></div>
@@ -180,7 +180,7 @@
                                     </div>
                                     <div class="achievement">
                                         <div>
-                                            <div class="description ellipsis">+7 others...</div>
+                                            <div class="description ellipsis">+12 others...</div>
                                         </div>
                                     </div>
                                 </div>
