@@ -1,8 +1,5 @@
 [<img align="center" src="https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-personal-page.svg">](https://stand-with-ukraine.pp.ua)
 
-<!-- [<img align="left" width="390" alt="github" src="github.svg">](#)
-[<img align="right" width="390" alt="social" src="social.svg">](#) -->
-
 <p align="left">
     <a href="https://bento.me/volopivoshenko">
         <img alt="bento" src="https://img.shields.io/badge/bento.me-%2300599C.svg?&logo=bento&logoColor=white">
@@ -33,15 +30,5 @@
     </a>
 </p>
 
-|                 |                 |
-| :-------------: | :-------------: |
-| ![](github.svg) | ![](social.svg) |
-
-<!-- [<img alt="placeholder" src="placeholder.svg">](#) -->
-
-<!-- [<img align="center" alt="anime" src="anime.svg">](#) -->
-<!-- [<img align="center" alt="music" src="music.svg">](#) -->
-
-<!-- [<img alt="placeholder" src="placeholder.svg">](#) -->
-
-<!-- [<img align="center" alt="anime" src="steam.svg">](#) -->
+| ![](assets/github.svg) | ![](assets/social.svg) |
+| :--------------------: | :--------------------: |
