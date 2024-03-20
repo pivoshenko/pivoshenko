@@ -16,7 +16,7 @@ jobs:
         id: github
         uses: lowlighter/metrics@latest
         with:
-          filename: github.svg
+          filename: assets/github.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: header, activity, community, repositories, metadata
           config_order: base, introduction, notable, languages
@@ -54,7 +54,7 @@ jobs:
         id: social
         uses: lowlighter/metrics@latest
         with:
-          filename: social.svg
+          filename: assets/social.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           config_order: leetcode, wakatime, stackoverflow, topics
@@ -89,7 +89,7 @@ jobs:
         id: anime
         uses: lowlighter/metrics@latest
         with:
-          filename: anime.svg
+          filename: assets/anime.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
 
@@ -103,7 +103,7 @@ jobs:
         id: music
         uses: lowlighter/metrics@latest
         with:
-          filename: music.svg
+          filename: assets/music.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
 
@@ -117,7 +117,7 @@ jobs:
         id: stean
         uses: lowlighter/metrics@latest
         with:
-          filename: steam.svg
+          filename: assets/steam.svg
           token: NOT_NEEDED
           base: ""
 
