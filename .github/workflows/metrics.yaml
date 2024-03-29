@@ -1,4 +1,4 @@
-# # Visit https://github.com/lowlighter/metrics#-documentation for full reference
+# Visit https://github.com/lowlighter/metrics#-documentation for full reference
 
 name: Metrics
 
@@ -21,7 +21,7 @@ jobs:
           base: header, activity, community, repositories, metadata
           config_order: base, introduction, notable, languages
 
-          user: volopivoshenko
+          user: pivoshenko
           template: classic
           config_timezone: Europe/London
 
@@ -72,7 +72,7 @@ jobs:
           plugin_leetcode_limit_recent: 2
           plugin_leetcode_limit_skills: 10
           plugin_leetcode_sections: solved
-          plugin_leetcode_user: volopivoshenko
+          plugin_leetcode_user: pivoshenko
 
           plugin_stackoverflow: true
           plugin_stackoverflow_limit: 2
@@ -85,42 +85,42 @@ jobs:
           plugin_topics_limit: 0
           plugin_topics_mode: icons
 
-      - name: anime
-        id: anime
-        uses: lowlighter/metrics@latest
-        with:
-          filename: assets/anime.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
+      # - name: anime
+      #   id: anime
+      #   uses: lowlighter/metrics@latest
+      #   with:
+      #     filename: assets/anime.svg
+      #     token: ${{ secrets.METRICS_TOKEN }}
+      #     base: ""
 
-          plugin_anilist: true
-          plugin_anilist_medias: anime
-          plugin_anilist_sections: favorites, characters
-          plugin_anilist_limit: 2
-          plugin_anilist_limit_characters: 22
+      #     plugin_anilist: true
+      #     plugin_anilist_medias: anime
+      #     plugin_anilist_sections: favorites, characters
+      #     plugin_anilist_limit: 2
+      #     plugin_anilist_limit_characters: 22
 
-      - name: music
-        id: music
-        uses: lowlighter/metrics@latest
-        with:
-          filename: assets/music.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
+      # - name: music
+      #   id: music
+      #   uses: lowlighter/metrics@latest
+      #   with:
+      #     filename: assets/music.svg
+      #     token: ${{ secrets.METRICS_TOKEN }}
+      #     base: ""
 
-          plugin_music: true
-          plugin_music_provider: spotify
-          plugin_music_mode: recent
-          plugin_music_token: "${{ secrets.SPOTIFY_CLIENT_ID }}, ${{ secrets.SPOTIFY_CLIENT_SECRET }}, ${{ secrets.SPOTIFY_REFRESH_TOKEN }}"
-          plugin_music_limit: 10
+      #     plugin_music: true
+      #     plugin_music_provider: spotify
+      #     plugin_music_mode: recent
+      #     plugin_music_token: "${{ secrets.SPOTIFY_CLIENT_ID }}, ${{ secrets.SPOTIFY_CLIENT_SECRET }}, ${{ secrets.SPOTIFY_REFRESH_TOKEN }}"
+      #     plugin_music_limit: 10
 
-      - name: steam
-        id: stean
-        uses: lowlighter/metrics@latest
-        with:
-          filename: assets/steam.svg
-          token: NOT_NEEDED
-          base: ""
+      # - name: steam
+      #   id: stean
+      #   uses: lowlighter/metrics@latest
+      #   with:
+      #     filename: assets/steam.svg
+      #     token: NOT_NEEDED
+      #     base: ""
 
-          plugin_steam: true
-          plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
-          plugin_steam_user: ${{ secrets.STEAM_USER_ID }}
+      #     plugin_steam: true
+      #     plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
+      #     plugin_steam_user: ${{ secrets.STEAM_USER_ID }}
