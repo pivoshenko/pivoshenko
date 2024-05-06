@@ -1,5 +1,3 @@
-# Visit https://github.com/lowlighter/metrics#-documentation for full reference
-
 name: Metrics
 
 on:
@@ -25,14 +23,6 @@ jobs:
           template: classic
           config_timezone: Europe/London
 
-          # plugin_achievements: true
-          # plugin_achievements_display: compact
-          # plugin_achievements_secrets: true
-          # plugin_achievements_threshold: C
-
-          plugin_introduction: true
-          plugin_introduction_title: true
-
           plugin_languages: true
           plugin_languages_analysis_timeout: 15
           plugin_languages_analysis_timeout_repositories: 7.5
@@ -49,78 +39,3 @@ jobs:
           plugin_notable_from: all
           plugin_notable_repositories: true
           plugin_notable_types: commit
-
-      - name: social
-        id: social
-        uses: lowlighter/metrics@latest
-        with:
-          filename: assets/social.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          config_order: leetcode, wakatime, stackoverflow, topics
-
-          plugin_wakatime: true
-          plugin_wakatime_days: 7
-          plugin_wakatime_limit: 5
-          plugin_wakatime_repositories_visibility: all
-          plugin_wakatime_sections: time, languages, languages-graphs
-          plugin_wakatime_url: https://wakatime.com
-          plugin_wakatime_user: current
-          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
-
-          plugin_leetcode: true
-          plugin_leetcode_limit_recent: 2
-          plugin_leetcode_limit_skills: 10
-          plugin_leetcode_sections: solved
-          plugin_leetcode_user: pivoshenko
-
-          plugin_stackoverflow: true
-          plugin_stackoverflow_limit: 2
-          plugin_stackoverflow_lines: 4
-          plugin_stackoverflow_lines_snippet: 2
-          plugin_stackoverflow_sections: ""
-          plugin_stackoverflow_user: 20554409
-
-          plugin_topics: true
-          plugin_topics_limit: 0
-          plugin_topics_mode: icons
-
-      # - name: anime
-      #   id: anime
-      #   uses: lowlighter/metrics@latest
-      #   with:
-      #     filename: assets/anime.svg
-      #     token: ${{ secrets.METRICS_TOKEN }}
-      #     base: ""
-
-      #     plugin_anilist: true
-      #     plugin_anilist_medias: anime
-      #     plugin_anilist_sections: favorites, characters
-      #     plugin_anilist_limit: 2
-      #     plugin_anilist_limit_characters: 22
-
-      # - name: music
-      #   id: music
-      #   uses: lowlighter/metrics@latest
-      #   with:
-      #     filename: assets/music.svg
-      #     token: ${{ secrets.METRICS_TOKEN }}
-      #     base: ""
-
-      #     plugin_music: true
-      #     plugin_music_provider: spotify
-      #     plugin_music_mode: recent
-      #     plugin_music_token: "${{ secrets.SPOTIFY_CLIENT_ID }}, ${{ secrets.SPOTIFY_CLIENT_SECRET }}, ${{ secrets.SPOTIFY_REFRESH_TOKEN }}"
-      #     plugin_music_limit: 10
-
-      # - name: steam
-      #   id: stean
-      #   uses: lowlighter/metrics@latest
-      #   with:
-      #     filename: assets/steam.svg
-      #     token: NOT_NEEDED
-      #     base: ""
-
-      #     plugin_steam: true
-      #     plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
-      #     plugin_steam_user: ${{ secrets.STEAM_USER_ID }}
