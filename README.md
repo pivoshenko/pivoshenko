@@ -1,7 +1,7 @@
 [<img align="center" src="https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-personal-page.svg">](https://stand-with-ukraine.pp.ua)
 
 <p align="left">
-    <a href="https://www.linkedin.com/in/-pivoshenko">
+    <a href="https://www.linkedin.com/in/pivoshenko">
         <img alt="linkedin" src="https://img.shields.io/badge/linkedin-%230077B5.svg?&logo=linkedin&logoColor=white">
     </a>
     <a href="https://www.kaggle.com/volodymyrpivoshenko">
