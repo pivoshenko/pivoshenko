@@ -16,24 +16,11 @@ jobs:
         with:
           filename: assets/github.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          base: header, activity, community, repositories, metadata
-          config_order: base, introduction, notable, languages
+          config_order: notable
 
           user: pivoshenko
           template: classic
           config_timezone: Europe/London
-
-          plugin_languages: true
-          plugin_languages_analysis_timeout: 15
-          plugin_languages_analysis_timeout_repositories: 7.5
-          plugin_languages_categories: markup, programming
-          plugin_languages_colors: github
-          plugin_languages_limit: 8
-          plugin_languages_recent_categories: markup, programming
-          plugin_languages_recent_days: 14
-          plugin_languages_recent_load: 300
-          plugin_languages_sections: most-used
-          plugin_languages_threshold: 0%
 
           plugin_notable: true
           plugin_notable_from: all
