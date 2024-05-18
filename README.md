@@ -17,5 +17,3 @@
         <img alt="wakatime" src="https://img.shields.io/badge/wakatime-168363?&logo=wakatime&logoColor=white">
     </a>
 </p>
-
-![](assets/github.svg)
