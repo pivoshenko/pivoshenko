@@ -16,13 +16,13 @@ jobs:
         with:
           filename: assets/github.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          base: activity
+          base: notable
           config_order: notable
 
           user: pivoshenko
-          template: classic
           config_timezone: Europe/London
-
+          template: markdown
+          plugin_activity: false
           plugin_notable: true
           plugin_notable_from: all
           plugin_notable_repositories: true
