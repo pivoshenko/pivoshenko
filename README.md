@@ -1,5 +1,13 @@
 [<img align="center" src="https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-personal-page.svg">](https://stand-with-ukraine.pp.ua)
 
+---
+
+## 👋 Hi there!
+
+My name is **Volodymyr** and I am a Machine Learning Team Lead fascinated by Open Source, Python, Rust and AI/ML.
+
+### Socials
+
 <p align="left">
     <a href="https://www.linkedin.com/in/pivoshenko">
         <img alt="linkedin" src="https://img.shields.io/badge/linkedin-%230077B5.svg?&logo=linkedin&logoColor=white">
@@ -17,3 +25,13 @@
         <img alt="wakatime" src="https://img.shields.io/badge/wakatime-168363?&logo=wakatime&logoColor=white">
     </a>
 </p>
+
+### Stats
+
+<div>
+  <img height="135px" src="https://github-readme-stats.vercel.app/api?username=pivoshenko&theme=tokyonight&show_icons=true&hide_title=true&hide_border=true&hide_rank=false&include_all_commits=true&count_private=true&line_height=21">
+</div>
+
+### Contributions
+
+![](assets/metrics.plugin.notable.svg)
