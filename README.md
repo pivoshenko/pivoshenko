@@ -4,7 +4,7 @@
 
 ## 👋 Hi there!
 
-My name is **Volodymyr** and I am a Machine Learning Team Lead fascinated by Open Source, Python, Rust and AI/ML.
+My name is **Volodymyr** and I am a Machine Learning Team Lead fascinated by Open Source, Development, and AI/ML.
 
 ### Socials
 
