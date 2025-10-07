@@ -61,9 +61,24 @@ def set_policy_disable_discussions(repository: str) -> None:
     logger.success(f"[{repository}] Discussions disabled")
 
 
+def set_policy_rebase_only(repository: str) -> None:
+    logger.info(f"[{repository}] Setting merge method to rebase only")
+    response = api.patch(
+        f"/repos/{config.GITHUB_USERNAME}/{repository}",
+        json={
+            "allow_merge_commit": False,
+            "allow_squash_merge": False,
+            "allow_rebase_merge": True,
+        },
+    )
+    response.raise_for_status()
+    logger.success(f"[{repository}] Merge method set to rebase only")
+
+
 if __name__ == "__main__":
     repositories = list_repositories()
     for repository in repositories:
         set_policy_disable_wiki(repository)
         set_policy_disable_projects(repository)
         set_policy_disable_discussions(repository)
+        set_policy_rebase_only(repository)
