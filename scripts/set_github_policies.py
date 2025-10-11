@@ -22,7 +22,7 @@ api = httpx.Client(
 
 def list_repositories() -> list[str]:
     logger.info(f"Listing repositories for {config.GITHUB_USERNAME}")
-    response = api.get(f"/users/{config.GITHUB_USERNAME}/repos")
+    response = api.get("/user/repos")
     response.raise_for_status()
     return [
         repository["name"]
