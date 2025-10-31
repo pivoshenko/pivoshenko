@@ -6,6 +6,7 @@ import httpx
 import loguru
 import dynaconf
 
+
 logger = loguru.logger
 config = dynaconf.Dynaconf(envvar_prefix="CONFIG")
 
@@ -29,6 +30,13 @@ def list_repositories() -> list[str]:
         for repository in response.json()
         if not repository["fork"] and not repository["archived"]
     ]
+
+
+def list_forked_repositories() -> list[dict]:
+    logger.info(f"Listing forked repositories for {config.GITHUB_USERNAME}")
+    response = api.get("/user/repos")
+    response.raise_for_status()
+    return [repository["name"] for repository in response.json() if repository["fork"]]
 
 
 def set_policy_disable_wiki(repository: str) -> None:
@@ -75,6 +83,24 @@ def set_policy_rebase_only(repository: str) -> None:
     logger.success(f"[{repository}] Merge method set to rebase only")
 
 
+def rename_repository(repository: str, name: str) -> None:
+    logger.info(f"[{repository}] Renaming to {name}")
+    response = api.patch(
+        f"/repos/{config.GITHUB_USERNAME}/{repository}",
+        json={"name": name},
+    )
+    response.raise_for_status()
+    logger.success(f"[{repository}] Renamed to {name}")
+
+
+def set_fork_name(repository: str) -> None:
+    match repository.startswith("fork-"):
+        case True:
+            logger.warning(f"[{repository}] Already has 'fork-' prefix, skipping")
+
+    rename_repository(repository, f"fork-{repository}")
+
+
 if __name__ == "__main__":
     repositories = list_repositories()
     for repository in repositories:
@@ -82,3 +108,7 @@ if __name__ == "__main__":
         set_policy_disable_projects(repository)
         set_policy_disable_discussions(repository)
         set_policy_rebase_only(repository)
+
+    forked_repositories = list_forked_repositories()
+    for repository in forked_repositories:
+        set_fork_name(repository)
