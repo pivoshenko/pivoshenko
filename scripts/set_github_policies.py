@@ -97,8 +97,8 @@ def set_fork_name(repository: str) -> None:
     match repository.startswith("fork-"):
         case True:
             logger.warning(f"[{repository}] Already has 'fork-' prefix, skipping")
-
-    rename_repository(repository, f"fork-{repository}")
+        case False:
+            rename_repository(repository, f"fork-{repository}")
 
 
 if __name__ == "__main__":
