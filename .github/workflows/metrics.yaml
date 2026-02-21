@@ -1,24 +1,24 @@
 name: Metrics
 
 on:
-  schedule: [{ cron: "0 10 * * *" }]
+  # schedule: [{ cron: "0 10 * * *" }]
   push: { branches: ["main"] }
 
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
-      # - name: Contributions Card
-      #   uses: lowlighter/metrics@latest
-      #   with:
-      #     filename: assets/metrics.plugin.notable.svg
-      #     token: ${{ secrets.METRICS_TOKEN }}
-      #     base: ""
-      #     user: pivoshenko
-      #     plugin_notable: yes
-      #     plugin_notable_from: all
-      #     plugin_notable_repositories: true
-      #     plugin_notable_types: commit
+      - name: Contributions Card
+        uses: lowlighter/metrics@latest
+        with:
+          filename: assets/metrics.plugin.notable.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          user: pivoshenko
+          plugin_notable: yes
+          plugin_notable_from: all
+          plugin_notable_repositories: true
+          plugin_notable_types: commit
       - uses: actions/checkout@v4
       - name: Stats Card
         uses: readme-tools/github-readme-stats-action@v1
