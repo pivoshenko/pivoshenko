@@ -1,6 +1,6 @@
 ## 👋 Hi there!
 
-Hi, I'm **Volodymyr**, a R&D Engineering Lead fascinated by system design, AI/ML, and software development. I enjoy building scalable solutions and exploring new technologies that push the boundaries of innovation.
+Hi, I'm **Volodymyr**, a R&D Engineering Lead fascinated by system design, AI/ML and software development. I enjoy building scalable solutions and exploring new technologies that push the boundaries of innovation.
 
 In my current role, I lead the R&D team and drive technical direction across end-to-end systems. I design scalable architectures, translate ideas into production-ready solutions, and support alignment between business stakeholders and team.
 
