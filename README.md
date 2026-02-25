@@ -4,27 +4,10 @@
 
 ## 👋 Hi there!
 
-My name is **Volodymyr** and I am a Machine Learning Team Lead fascinated by Open Source, Development, and AI/ML.
+Hi, I'm **Volodymyr**, a R&D/AI/ML Engineering Lead fascinated by system design, artificial intelligence, and software development. I enjoy building scalable solutions and exploring new technologies that push the boundaries of innovation.
 
-### Socials
+In my current role, I lead the R&D team and drive technical direction across end-to-end systems. I design scalable architectures, translate ideas into production-ready solutions, and support alignment between business stakeholders and team.
 
-<p align="left">
-  <a href="https://www.linkedin.com/in/pivoshenko">
-    <img alt="linkedin" src="https://img.shields.io/badge/linkedin-%230077B5.svg?&logo=linkedin&logoColor=white">
-  </a>
-  <a href="https://www.kaggle.com/volodymyrpivoshenko">
-    <img alt="kaggle" src="https://img.shields.io/badge/Kaggle-035a7d?&logo=kaggle&logoColor=white">
-  </a>
-  <a href="https://leetcode.com/pivoshenko">
-    <img alt="leetcode" src="https://img.shields.io/badge/LeetCode-000000?&logo=LeetCode&logoColor=#d16c06">
-  </a>
-  <a href="https://stackoverflow.com/users/20554409/pivoshenko">
-    <img alt="stakoverflow" src="https://img.shields.io/badge/stackoverflow-gray?&logo=stackoverflow&logoColor=#d16c06">
-  </a>
-</p>
+In my spare time, I dedicate myself to Open Source and building products, where I freely explore new ideas, collaborate with passionate developers, and give back to the tech community that has shaped my journey.
 
-### Stats
-
-![](assets/stats.svg)
-
-![](assets/metrics.plugin.notable.svg)
+Outside of work, I enjoy cycling and playing video games to unwind.
