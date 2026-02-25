@@ -2,18 +2,18 @@
 
 from __future__ import annotations
 
+import os
+
 import httpx
 import loguru
-import dynaconf
 
 
 logger = loguru.logger
-config = dynaconf.Dynaconf(envvar_prefix="CONFIG")
 
 api = httpx.Client(
     base_url="https://api.github.com",
     headers={
-        "Authorization": f"Bearer {config.GITHUB_TOKEN}",
+        "Authorization": f"Bearer {os.environ['GH_TOKEN']}",
         "Accept": "application/vnd.github+json",
         "X-GitHub-Api-Version": "2022-11-28",
     },
@@ -22,7 +22,7 @@ api = httpx.Client(
 
 
 def list_repositories() -> list[str]:
-    logger.info(f"Listing repositories for {config.GITHUB_USERNAME}")
+    logger.info(f"Listing repositories for {os.environ['GITHUB_REPOSITORY_OWNER']}")
     response = api.get("/user/repos")
     response.raise_for_status()
     return [
@@ -33,7 +33,7 @@ def list_repositories() -> list[str]:
 
 
 def list_forked_repositories() -> list[dict]:
-    logger.info(f"Listing forked repositories for {config.GITHUB_USERNAME}")
+    logger.info(f"Listing forked repositories for {os.environ['GITHUB_REPOSITORY_OWNER']}")
     response = api.get("/user/repos")
     response.raise_for_status()
     return [repository["name"] for repository in response.json() if repository["fork"]]
@@ -42,7 +42,7 @@ def list_forked_repositories() -> list[dict]:
 def set_policy_disable_wiki(repository: str) -> None:
     logger.info(f"[{repository}] Disabling wiki")
     response = api.patch(
-        f"/repos/{config.GITHUB_USERNAME}/{repository}",
+        f"/repos/{os.environ['GITHUB_REPOSITORY_OWNER']}/{repository}",
         json={"has_wiki": False},
     )
     response.raise_for_status()
@@ -52,7 +52,7 @@ def set_policy_disable_wiki(repository: str) -> None:
 def set_policy_disable_projects(repository: str) -> None:
     logger.info(f"[{repository}] Disabling projects")
     response = api.patch(
-        f"/repos/{config.GITHUB_USERNAME}/{repository}",
+        f"/repos/{os.environ['GITHUB_REPOSITORY_OWNER']}/{repository}",
         json={"has_projects": False},
     )
     response.raise_for_status()
@@ -62,7 +62,7 @@ def set_policy_disable_projects(repository: str) -> None:
 def set_policy_disable_discussions(repository: str) -> None:
     logger.info(f"[{repository}] Disabling discussions")
     response = api.patch(
-        f"/repos/{config.GITHUB_USERNAME}/{repository}",
+        f"/repos/{os.environ['GITHUB_REPOSITORY_OWNER']}/{repository}",
         json={"has_discussions": False},
     )
     response.raise_for_status()
@@ -72,7 +72,7 @@ def set_policy_disable_discussions(repository: str) -> None:
 def set_policy_rebase_only(repository: str) -> None:
     logger.info(f"[{repository}] Setting merge method to rebase only")
     response = api.patch(
-        f"/repos/{config.GITHUB_USERNAME}/{repository}",
+        f"/repos/{os.environ['GITHUB_REPOSITORY_OWNER']}/{repository}",
         json={
             "allow_merge_commit": False,
             "allow_squash_merge": False,
@@ -86,7 +86,7 @@ def set_policy_rebase_only(repository: str) -> None:
 def rename_repository(repository: str, name: str) -> None:
     logger.info(f"[{repository}] Renaming to {name}")
     response = api.patch(
-        f"/repos/{config.GITHUB_USERNAME}/{repository}",
+        f"/repos/{os.environ['GITHUB_REPOSITORY_OWNER']}/{repository}",
         json={"name": name},
     )
     response.raise_for_status()
