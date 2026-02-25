@@ -1,7 +1,3 @@
-[<img align="center" src="https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-personal-page.svg">](https://stand-with-ukraine.pp.ua)
-
----
-
 ## 👋 Hi there!
 
 Hi, I'm **Volodymyr**, a R&D/AI/ML Engineering Lead fascinated by system design, artificial intelligence, and software development. I enjoy building scalable solutions and exploring new technologies that push the boundaries of innovation.
