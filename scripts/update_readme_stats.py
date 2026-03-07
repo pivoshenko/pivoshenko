@@ -220,10 +220,7 @@ def render_notable(contributions: list[dict]) -> str:
         lines.append("*No notable contributions found.*")
         return "\n".join(lines)
 
-    lines.extend(
-        f"- [{c['repo']}]({c['repo_url']}) ⭐ {fmt(c['stars'])}"
-        for c in contributions
-    )
+    lines.extend(f"- [{c['repo']}]({c['repo_url']}) ⭐ {fmt(c['stars'])}" for c in contributions)
     return "\n".join(lines)
 
 
