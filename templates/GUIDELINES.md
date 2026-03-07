@@ -36,7 +36,7 @@ Topic selection rules:
 
 1. Write a short description using the required format
 2. Validate the description against all short description rules
-3. Select at least 7 relevant topics
+3. Select at least 5 relevant topics
 4. Sort topics alphabetically
 5. Remove redundant or low-signal topics
 6. Confirm topics reflect repository scope and target audience
