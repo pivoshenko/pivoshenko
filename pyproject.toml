@@ -4,11 +4,11 @@ version = "1.0.0"
 description = "pivoshenko"
 readme = "README.md"
 requires-python = "==3.13.*"
-dependencies = ["dynaconf>=3.2.12", "httpx>=0.28.1", "loguru>=0.7.3"]
+dependencies = ["httpx~=0.28.1", "loguru~=0.7.3"]
 
 [dependency-groups]
-formatters = ["ruff>=0.15.4"]
-linters = ["ruff>=0.15.4"]
+formatters = ["ruff~=0.15.4"]
+linters = ["ruff~=0.15.4"]
 
 [tool.ruff]
 fix = true
