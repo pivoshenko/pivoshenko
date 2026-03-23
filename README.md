@@ -11,25 +11,25 @@ Outside of work, I enjoy cycling and playing video games to unwind.
 <!-- STATS:START -->
 ## Stats
 
-- ⭐ Stars: **418**
-- 💻 Commits: **5.1k**
-- 🔀 Pull Requests: **56**
-- 🐛 Issues: **21**
+- ⭐ Stars: **435**
+- 💻 Commits: **5.2k**
+- 🔀 Pull Requests: **70**
+- 🐛 Issues: **22**
 <!-- STATS:END -->
 
 <!-- NOTABLE:START -->
 ## Notable Contributions
 
 - [withfig/autocomplete](https://github.com/withfig/autocomplete) ⭐ 25.1k
-- [dair-ai/ML-Papers-of-the-Week](https://github.com/dair-ai/ML-Papers-of-the-Week) ⭐ 12.2k
+- [dair-ai/ML-Papers-of-the-Week](https://github.com/dair-ai/ML-Papers-of-the-Week) ⭐ 12.3k
 - [SchemaStore/schemastore](https://github.com/SchemaStore/schemastore) ⭐ 3.7k
 - [Bogdanp/awesome-advent-of-code](https://github.com/Bogdanp/awesome-advent-of-code) ⭐ 3.2k
 - [facebookresearch/audio2photoreal](https://github.com/facebookresearch/audio2photoreal) ⭐ 2.9k
 - [dotfiles/dotfiles.github.com](https://github.com/dotfiles/dotfiles.github.com) ⭐ 1.5k
 - [jnmcfly/awesome-startpage](https://github.com/jnmcfly/awesome-startpage) ⭐ 1.2k
-- [ZhaoUncle/Awesome-Homepage](https://github.com/ZhaoUncle/Awesome-Homepage) ⭐ 255
+- [ZhaoUncle/Awesome-Homepage](https://github.com/ZhaoUncle/Awesome-Homepage) ⭐ 254
 <!-- NOTABLE:END -->
 
 <!-- UPDATED:START -->
-*Updated: 2026-03-16*
+*Updated: 2026-03-23*
 <!-- UPDATED:END -->
