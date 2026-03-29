@@ -32,7 +32,7 @@ def list_repositories() -> list[str]:
     ]
 
 
-def list_forked_repositories() -> list[dict]:
+def list_forked_repositories() -> list[str]:
     logger.info(f"Listing forked repositories for {os.environ['GITHUB_REPOSITORY_OWNER']}")
     response = api.get("/user/repos")
     response.raise_for_status()
