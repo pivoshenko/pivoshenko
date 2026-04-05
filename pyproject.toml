@@ -7,11 +7,8 @@ requires-python = ">=3.13"
 dependencies = ["httpx~=0.28.1", "loguru~=0.7.3"]
 
 [dependency-groups]
-formatters = ["pyupgrade~=3.21.2", "ruff~=0.15.8"]
-linters = ["commitizen~=4.13.9", "ruff~=0.15.8", "ty~=0.0.26"]
-
-[tool.commitizen]
-allowed_prefixes = ["Initial", "Merge", "Update"]
+formatters = ["pyupgrade~=3.21.2", "ruff~=0.15.9"]
+linters = ["ruff~=0.15.9", "ty~=0.0.28"]
 
 [tool.ruff]
 fix = true
