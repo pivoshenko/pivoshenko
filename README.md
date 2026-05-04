@@ -12,26 +12,26 @@ Outside of work, I enjoy cycling and playing video games to unwind.
 ## Stats
 
 - ⭐ Stars: **502**
-- 💻 Commits: **5.3k**
-- 🔀 Pull Requests: **74**
+- 💻 Commits: **5.4k**
+- 🔀 Pull Requests: **76**
 - 🐛 Issues: **28**
 <!-- STATS:END -->
 
 <!-- NOTABLE:START -->
 ## Notable Contributions
 
-- [withfig/autocomplete](https://github.com/withfig/autocomplete) ⭐ 25.1k
+- [withfig/autocomplete](https://github.com/withfig/autocomplete) ⭐ 25.2k
 - [dair-ai/AI-Papers-of-the-Week](https://github.com/dair-ai/AI-Papers-of-the-Week) ⭐ 12.4k
 - [SchemaStore/schemastore](https://github.com/SchemaStore/schemastore) ⭐ 3.7k
 - [Bogdanp/awesome-advent-of-code](https://github.com/Bogdanp/awesome-advent-of-code) ⭐ 3.2k
 - [facebookresearch/audio2photoreal](https://github.com/facebookresearch/audio2photoreal) ⭐ 2.9k
 - [dotfiles/dotfiles.github.com](https://github.com/dotfiles/dotfiles.github.com) ⭐ 1.5k
 - [jnmcfly/awesome-startpage](https://github.com/jnmcfly/awesome-startpage) ⭐ 1.2k
-- [JackyST0/awesome-agent-skills](https://github.com/JackyST0/awesome-agent-skills) ⭐ 472
-- [bradAGI/awesome-cli-coding-agents](https://github.com/bradAGI/awesome-cli-coding-agents) ⭐ 266
+- [JackyST0/awesome-agent-skills](https://github.com/JackyST0/awesome-agent-skills) ⭐ 479
+- [bradAGI/awesome-cli-coding-agents](https://github.com/bradAGI/awesome-cli-coding-agents) ⭐ 311
 - [ZhaoUncle/Awesome-Homepage](https://github.com/ZhaoUncle/Awesome-Homepage) ⭐ 259
 <!-- NOTABLE:END -->
 
 <!-- UPDATED:START -->
-*Updated: 2026-04-27*
+*Updated: 2026-05-04*
 <!-- UPDATED:END -->
