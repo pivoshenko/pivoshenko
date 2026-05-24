@@ -36,6 +36,6 @@ uv run python scripts/set_repository_policies.py
 - Python 3.13+, all files must include `from __future__ import annotations`
 - Ruff with `select = ["ALL"]`, ignoring `D` (docstrings), `G004`, `INP001`
 - Line length: 100
-- Imports: single-line, sorted by length, stdlib-first
+- Imports: single-line, sorted by length (`force-single-line`, `length-sort-straight`; `from-first = false` → default isort grouping)
 - Formatting: double quotes, ruff format
 - Type checking: `ty`
