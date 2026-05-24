@@ -11,8 +11,10 @@ This is the GitHub profile repository (`pivoshenko/pivoshenko`) for Volodymyr Pi
 All commands use `uv` as the package manager and `just` as the task runner.
 
 ```bash
+just install   # uv sync
 just format    # Run pyupgrade + ruff format on scripts/
-just lint      # Run ty type checker + ruff linter
+just lint      # Run ruff linter + ty type checker
+just check     # Full gate (same as lint — no build step)
 just update    # Upgrade uv.lock and sync pyproject.toml
 ```
 
