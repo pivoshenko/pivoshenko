@@ -1,6 +1,6 @@
-## 👋 Hi there!
+## 👋 Hello there!
 
-Hi, I'm **Volodymyr** - Principal AI/R&D Engineer fascinated by AI, system design, and software development.
+Hello, I'm **Volodymyr** - Principal AI/R&D Engineer fascinated by AI, system design, and software development.
 
 In my current role, I lead the R&D team and work hands-on with architecture and implementation. I help turn rough ideas into working solutions and keep engineering decisions practical and scalable.
 
