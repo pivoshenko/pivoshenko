@@ -7,8 +7,11 @@ requires-python = ">=3.13"
 dependencies = ["httpx~=0.28.1", "loguru~=0.7.3"]
 
 [dependency-groups]
-formatters = ["pyupgrade~=3.21.2", "ruff~=0.15.14"]
-linters = ["ruff~=0.15.14", "ty~=0.0.39"]
+formatters = ["pyupgrade~=3.21.2", "ruff~=0.15.15"]
+linters = ["ruff~=0.15.15", "ty~=0.0.40"]
+
+[tool.ty.environment]
+python-version = "3.13"
 
 [tool.ruff]
 fix = true

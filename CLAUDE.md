@@ -14,16 +14,19 @@ All commands use `uv` as the package manager and `just` as the task runner.
 just install   # uv sync
 just format    # Run pyupgrade + ruff format on scripts/
 just lint      # Run ruff linter + ty type checker
+just audit     # uv audit — scan deps for known vulns
 just check     # Full gate (same as lint — no build step)
 just update    # Upgrade uv.lock and sync pyproject.toml
 ```
 
-Running scripts directly (requires `GH_TOKEN` and `GITHUB_REPOSITORY_OWNER` env vars from `.env`):
+Script-runner recipes (require `GH_TOKEN` and `GITHUB_REPOSITORY_OWNER` env vars from `.env`):
 
 ```bash
-uv run python scripts/update_readme_stats.py
-uv run python scripts/set_repository_policies.py
+just stats     # uv run python scripts/update_readme_stats.py
+just policies  # uv run python scripts/set_repository_policies.py
 ```
+
+Workflows invoke ONLY `just <recipe>` (per the CI contract) — never `uv run …` directly. Add a recipe before adding a workflow step.
 
 ## Architecture
 
