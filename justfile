@@ -2,20 +2,20 @@ default:
     @just --list
 
 install:
-    uv sync
+    uv sync --all-groups --all-extras
 
 format:
-    find scripts -type f -name '*.py' | xargs uv run pyupgrade --py313-plus
+    find src -type f -name '*.py' | xargs uv run pyupgrade --py313-plus
     uv run ruff format .
 
 lint:
-    uv run ruff check .
     uv run ty check .
+    uv run ruff check .
 
 audit:
     uv audit
 
-check: lint
+check: lint audit
 
 update:
     uv lock --upgrade
