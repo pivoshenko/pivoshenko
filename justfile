@@ -5,7 +5,7 @@ install:
     uv sync --all-groups --all-extras
 
 format:
-    find src -type f -name '*.py' | xargs uv run pyupgrade --py313-plus
+    find scripts -type f -name '*.py' | xargs uv run pyupgrade --py313-plus
     uv run ruff format .
 
 lint:
