@@ -1,3 +1,6 @@
+# Requires GitHub secrets
+# - GITHUB_TOKEN (auto-provided by Actions)
+
 name: Set Repository Policies
 
 on:
