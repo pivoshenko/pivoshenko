@@ -18,9 +18,10 @@ Both scripts require `GH_TOKEN` and `GITHUB_REPOSITORY_OWNER` (see `.env.example
 ```
 just install   # uv sync --all-groups --all-extras
 just format    # pyupgrade (py313+) over . (excl .venv), then ruff check --fix ., then ruff format .
-just lint      # ruff check . && ruff format --check . && ty check
+just lint      # ruff check . && ty check
 just audit     # pip-audit
-just check     # lint (CI gate)
+just test      # no-ops (repo has a .no-tests sentinel); prints "skipping" and exits 0
+just check     # lint test (CI gate)
 just update    # uv lock --upgrade && uvx uv-upsync
 just stats     # run update_readme_stats.py locally
 just policies  # run set_repository_policies.py locally
@@ -28,7 +29,7 @@ just policies  # run set_repository_policies.py locally
 
 Python is pinned to **3.13** (`requires-python = ">=3.13"`, ruff `target-version = "py313"`, `ty` env matches). Package manager is **uv**; do not introduce pip/poetry.
 
-Note: `.github/workflows/ci.yaml` calls `just test`, but there is no `test` recipe and no test suite — adding one is the obvious unblock if a test fails in CI.
+CI runs as a single flat `ci` job on `ubuntu-24.04-arm`: install → lint → audit → test sequentially.
 
 ## Code conventions
 
