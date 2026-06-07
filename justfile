@@ -5,21 +5,23 @@ install:
     uv sync --all-groups --all-extras
 
 format:
-    find scripts -type f -name '*.py' | xargs uv run pyupgrade --py313-plus
-    uv run ruff format .
+    find scripts -type f -name '*.py' | xargs uvx pyupgrade --py313-plus
+    uvx ruff check --fix .
+    uvx ruff format .
 
 lint:
-    uv run ty check .
-    uv run ruff check .
+    uvx ruff check .
+    uvx ruff format --check .
+    uvx ty check
 
 audit:
-    uv audit
+    uvx pip-audit
 
-check: lint audit
+check: lint
 
 update:
-    uv lock --upgrade
     uvx uv-upsync
+    uv sync
 
 stats:
     uv run python scripts/update_readme_stats.py

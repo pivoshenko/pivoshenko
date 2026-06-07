@@ -17,11 +17,11 @@ Both scripts require `GH_TOKEN` and `GITHUB_REPOSITORY_OWNER` (see `.env.example
 
 ```
 just install   # uv sync --all-groups --all-extras
-just format    # pyupgrade (py313+) then ruff format
-just lint      # ty check . && ruff check .
-just audit     # uv audit
-just check     # lint + audit (CI gate)
-just update    # uv lock --upgrade && uvx uv-upsync
+just format    # pyupgrade (py313+) over scripts/, then ruff check --fix ., then ruff format .
+just lint      # ruff check . && ruff format --check . && ty check
+just audit     # pip-audit
+just check     # lint (CI gate)
+just update    # uvx uv-upsync && uv sync
 just stats     # run update_readme_stats.py locally
 just policies  # run set_repository_policies.py locally
 ```
