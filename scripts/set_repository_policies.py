@@ -1,4 +1,4 @@
-"""Script to set GitHub policies across all repositories."""
+"""Module that contains the script that sets GitHub policies across all repositories."""
 
 from __future__ import annotations
 
