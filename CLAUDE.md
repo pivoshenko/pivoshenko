@@ -37,7 +37,4 @@ CI runs as a single flat `ci` job on `ubuntu-24.04-arm`: install → lint → au
 - Isort config forces single-line imports, `from-first = false`, `length-sort-straight = true`, **2 lines after imports**, **1 line between import types**, and **`from __future__ import annotations` is a required import in every module**.
 - Format-on-fix is on (`ruff.fix = true`); prefer `just format` over manual edits when restructuring imports.
 - Line length 100, double-quoted strings, docstring code blocks are formatted.
-
-## Parent workspace
-
-This repo sits inside `~/Development/sources/`, which has its own `CLAUDE.md` describing the broader monorepo-ish layout and group conventions. This repo is in the **`personal`** group there. The root-level `just <verb>-personal` recipes fan verbs out across the personal group, so keep the recipe vocabulary (`install`/`format`/`lint`/`check`/`update`) aligned with sibling repos.
+- Module docstrings open with `Module that contains ...`; `__init__.py` opens with `Package that contains ...`. This holds even though ruff's `D` rules are ignored here — the convention is house style, not lint-enforced.
