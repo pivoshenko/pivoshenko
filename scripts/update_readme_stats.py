@@ -1,4 +1,4 @@
-"""Module that contains the script that updates README with GitHub stats and notable contributions."""
+"""Module that contains the script that updates README stats and notable contributions."""
 
 from __future__ import annotations
 
