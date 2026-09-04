@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 The GitHub profile repository for `pivoshenko` (`github.com/pivoshenko/pivoshenko`). It has exactly two jobs:
 
 1. **`README.md`** — the rendered profile page. The regions between `<!-- STATS:START -->`/`<!-- STATS:END -->`, `<!-- NOTABLE:START -->`/`<!-- NOTABLE:END -->`, and `<!-- UPDATED:START -->`/`<!-- UPDATED:END -->` are machine-generated; everything outside them is hand-written prose. Never hand-edit inside the markers — the next scheduled run overwrites them.
-2. **`scripts/`** — two standalone Python scripts driven by GitHub Actions. There is no package, no `src/`, no importable module; each script is a flat file with a `if __name__ == "__main__"` block.
+2. **`scripts/`** — two standalone Python scripts driven by GitHub Actions. There is no package, no `src/`, no importable module; each script is a flat file with an `if __name__ == "__main__"` block.
 
 ## Commands
 
@@ -24,7 +24,7 @@ just stats        # run scripts/update_readme_stats.py locally (needs GH_TOKEN)
 just policies     # run scripts/set_repository_policies.py locally (needs GH_TOKEN) -- MUTATES ALL REPOS
 ```
 
-Package manager is **uv**; Python is pinned to **3.13** (`requires-python`, ruff `target-version = "py313"`, `[tool.ty.environment]`). Do not introduce pip/poetry/pytest configuration.
+Package manager is **uv**; Python is pinned to **3.13** (`.python-version`, `requires-python`, ruff `target-version = "py313"`, `[tool.ty.environment]`). Do not introduce pip/poetry/pytest configuration.
 
 Gotcha: only `just install` uses the synced `.venv`. The `format`/`lint`/`audit`/`update` recipes shell out through `uvx`, which resolves the *latest* ruff/ty/pyupgrade rather than the versions pinned in `[dependency-groups]`. A clean `just lint` locally can still differ from CI if the pins are stale; bump the pins in `pyproject.toml` when new rules start firing.
 
@@ -63,6 +63,6 @@ Two things to know before editing it:
 - Ruff `select = ["ALL"]` with only `CPY001`, `D`, `G004`, `INP001` ignored — assume nearly every rule applies. `fix = true` and `unsafe-fixes = true`, so `ruff check` rewrites code on every run; prefer `just format` over hand-restructuring.
 - Isort is configured unusually: `force-single-line = true`, `from-first = false`, `length-sort-straight = true`, 2 blank lines after imports, 1 blank line between import types, and `from __future__ import annotations` is a `required-imports` entry in every module.
 - Line length 100 (ruff), double-quoted strings, `docstring-code-format = true`. `.editorconfig` sets 4-space indent for Python (2 elsewhere) and a looser 120 guide — ruff's 100 wins.
-- Module docstrings open with `Module that contains ...`; packages would use `Package that contains ...`. House style, not lint-enforced (`D` is ignored).
+- Module docstrings open with `Module that contains ...`. House style, not lint-enforced (`D` is ignored).
 - `G004` is ignored specifically so loguru f-string logging (`logger.info(f"...")`) is allowed — that is the established logging style here.
-- Commits follow Angular conventional commits (`docs:`, `chore:`, `ci:`, `build(deps):`). Issue/PR labels are declared in `.github/labels.yaml` under the `type: `, `priority: `, `status: ` prefixes.
+- Commits follow Angular conventional commits (`docs:`, `chore:`, `ci:`, `build(deps):`). PRs use `.github/PULL_REQUEST_TEMPLATE.md`. Repo labels are managed externally via Terraform, not in this repo.
