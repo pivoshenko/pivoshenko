@@ -1,4 +1,4 @@
-## 👋 Hello there!
+## 👋 Hello There!
 
 Hello, I'm **Volodymyr** - Principal AI/ML R&D Engineer fascinated by AI, system design, and software development.
 
