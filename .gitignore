@@ -28,7 +28,7 @@ MANIFEST
 
 # PyInstaller
 #   Usually these files are written by a python script from a template
-#   before PyInstaller builds the exe, so as to inject date/other infos into it.
+#   before PyInstaller builds the exe, so as to inject date/other infos into it
 *.manifest
 *.spec
 
@@ -122,7 +122,7 @@ ipython_config.py
 #   Similar to Pipfile.lock, it is generally recommended to include pixi.lock in version control.
 # pixi.lock
 #   Pixi creates a virtual environment in the .pixi directory, just like venv module creates one
-#   in the .venv directory. It is recommended not to include this directory in version control.
+#   in the .venv directory. It is recommended not to include this directory in version control
 .pixi/*
 !.pixi/config.toml
 
