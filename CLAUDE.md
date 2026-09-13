@@ -1,67 +1,45 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+## Read This First
+
+- **`scripts/set_repository_policies.py` is a live, irreversible, account-wide mutation.** It touches other repositories, not this one, and renaming a fork changes its URL. Its workflow is `workflow_dispatch`-only for that reason. Do not run it to "test a change" - if you modify it, reason about the diff rather than executing it
+- **The marker regions in `README.md` are generated. Do not hand-edit them** - the next scheduled run silently overwrites your changes. To change what appears there, edit the `render_*` functions in `scripts/update_readme_stats.py`. The markers themselves must stay exactly as written; `update_readme` matches them with `re.sub`, and a missing marker means that section is silently skipped, not an error. The README's prose outside the markers is hand-written and safe to edit
+- **`.env` holds a real token.** It is gitignored - never read it into output, echo it, or commit it
+- **`just lint` mutates files despite its name.** `[tool.ruff]` sets `fix = true` and `unsafe-fixes = true`, which apply to every `ruff check` invocation, including the one inside `lint`. Use `uvx ruff check --no-fix .` when you want a pure verification pass
+- **`AGENTS.md` is a symlink to `CLAUDE.md`.** Edit this file and both change; never replace the symlink with a real file
 
 ## What This Repo Is
 
-The GitHub profile repository for `pivoshenko` (`github.com/pivoshenko/pivoshenko`). It has exactly two jobs:
+`pivoshenko/pivoshenko` - GitHub's special profile repository. Two things live here:
 
-1. **`README.md`** - the rendered profile page. The regions between `<!-- STATS:START -->`/`<!-- STATS:END -->`, `<!-- NOTABLE:START -->`/`<!-- NOTABLE:END -->`, and `<!-- UPDATED:START -->`/`<!-- UPDATED:END -->` are machine-generated; everything outside them is hand-written prose. Never hand-edit inside the markers - the next scheduled run overwrites them
-2. **`scripts/`** - two standalone Python scripts driven by GitHub Actions. There is no package, no `src/`, no importable module; each script is a flat file with an `if __name__ == "__main__"` block
+1. `README.md`, which GitHub renders on <https://github.com/pivoshenko>
+2. A pair of Python automation scripts that talk to the GitHub API: one regenerates parts of that README, the other applies account-wide repository settings
+
+There is no application, library, or package to import. `pyproject.toml` declares a project named `pivoshenko` only so `uv` has something to sync against; nothing is published.
 
 ## Commands
 
-```sh
-just              # list recipes
-just install      # uv sync --all-groups --all-extras
-just format       # pyupgrade --py313-plus over all .py (excl .venv) -> ruff check --fix -> ruff format
-just lint         # ruff check . && ty check
-just test         # no-op: prints "skipping (.no-tests sentinel)" while .no-tests exists
-just check        # lint + test
-just update       # uv lock --upgrade && uvx uv-upsync
-just update-readme-stats        # run scripts/update_readme_stats.py locally (needs GH_TOKEN)
-just set-repository-policies     # run scripts/set_repository_policies.py locally (needs GH_TOKEN) -- MUTATES ALL REPOS
-```
+`just --list` for the full set, `CONTRIBUTING.md` for what each recipe and workflow does. What neither tells you:
 
-Package manager is **uv**; Python is pinned to **3.13** (`.python-version`, `requires-python`, ruff `target-version = "py313"`, `[tool.ty.environment]`). Do not introduce pip/poetry/pytest configuration.
+- linters and formatters run via `uvx`, not from the project venv. The `formatters` and `linters` dependency groups exist so the versions are pinned and lockable, but the recipes invoke ephemeral `uvx` tools. `just install` is only needed for the scripts' own runtime deps
+- `.no-tests` is a sentinel, not a config file. Deleting it makes `just test` and CI fail until a real test command is wired into the `test` recipe. Add tests and the recipe together, or leave it alone
+- both scripts read `GITHUB_REPOSITORY_OWNER` and `GH_TOKEN` (see `.env.example`); in Actions `GH_TOKEN` is the auto-provided `secrets.GITHUB_TOKEN`
 
-Gotcha: only `just install` uses the synced `.venv`. The `format`/`lint`/`update` recipes shell out through `uvx`, which resolves the *latest* ruff/ty/pyupgrade rather than the versions pinned in `[dependency-groups]`. A clean `just lint` locally can still differ from CI if the pins are stale; bump the pins in `pyproject.toml` when new rules start firing.
+## Scripts
 
-There are no tests and no test framework. `.no-tests` is a deliberate sentinel file - deleting it makes `just test` fail hard by design.
+Both are standalone entry points guarded by `if __name__ == "__main__"`, with no package `__init__.py` - which is why `INP001` is in the Ruff ignore list.
 
-## CI and Automation (`.github/workflows/`)
+`update_readme_stats.py` fetches aggregate account numbers over the GitHub GraphQL API and rewrites three marker-delimited regions of `README.md` in place (`STATS`, `NOTABLE`, `UPDATED`). Shape of the fetch: stars paginate over owned non-fork repos, commits are summed year-by-year from account creation to now (so the count includes `restrictedContributionsCount`), and notable contributions are merged PRs into repos the user does not own, capped at `NOTABLE_MAX_PAGES` pages of 100 and filtered by `NOTABLE_MIN_STARS`.
 
-- `ci.yaml` - a single flat `ci` job on `ubuntu-24.04-arm`, triggered on push to `main`, all PRs, and dispatch. Steps run sequentially: `just install` → `just lint` → test. The test step re-implements the `.no-tests` check inline in bash rather than calling `just test`, so that guard exists in two places; keep them in sync
-- `update-readme-stats.yaml` - cron `0 10 * * 1` (Mondays 10:00 UTC) plus dispatch. Runs `just update-readme-stats`, then commits `README.md` back to `main` as `github-actions[bot]` (`|| exit 0` when nothing changed). Needs `contents: write`
-- `set-repository-policies.yaml` - `workflow_dispatch` **only**, never scheduled. This is intentional: the script mutates every repo on the account
+`set_repository_policies.py` lists repos with `GET /user/repos`, then disables wiki, projects, and discussions on every non-fork, non-archived one and forces rebase-only merges, and renames every fork to `fork-<name>` (skipping any already prefixed). Its reach is narrower and less predictable than that sounds:
 
-Both scripts read `GH_TOKEN` and `GITHUB_REPOSITORY_OWNER` (see `.env.example`); workflows pass the ambient `secrets.GITHUB_TOKEN`.
+- both `list_repositories()` and `list_forked_repositories()` call `/user/repos` with no `per_page` and no pagination, so they only ever see GitHub's default first page. It is not every repo on the account
+- `/user/repos` returns every repo the token's user can access, org and collaborator repos included, while every PATCH is hardcoded to `/repos/{GITHUB_REPOSITORY_OWNER}/{name}`. A non-owned repo in that page yields a 404 that `raise_for_status()` turns into a hard abort mid-run
 
-## `scripts/update_readme_stats.py`
+## Conventions
 
-Talks to the GitHub **GraphQL** API (`POST /graphql` via a shared `httpx.Client`; `graphql()` raises on a non-empty `errors` array). It gathers four numbers and one list:
+Ruff runs with `select = ["ALL"]` and a short, deliberate ignore list; the isort settings make imports sort by line length rather than alphabetically, and `from __future__ import annotations` is a `required-imports` entry. All of it lives in `pyproject.toml` and `just format` applies it - do not hand-arrange imports.
 
-- stars - paginates all non-fork repos owned by the user, sums `stargazerCount`
-- commits - reads the account creation year, then loops year-by-year over `contributionsCollection`, adding `totalCommitContributions + restrictedContributionsCount` (private contributions included)
-- PRs / issues - lifetime `totalCount`
-- notable contributions - walks merged PRs newest-first for at most `NOTABLE_MAX_PAGES` (5) pages of 100, keeps repos not owned by the user with at least `NOTABLE_MIN_STARS` (100) stars, dedupes by `nameWithOwner`, sorts by stars, takes `NOTABLE_LIMIT` (10)
+Modules carry a one-line `"""Module that contains the script that ..."""` header; follow that phrasing for new scripts.
 
-Rendering is plain string joins; `update_readme()` swaps each marker block with a `re.sub(..., flags=re.DOTALL)`. `fmt()` abbreviates at 1k/1M with one decimal. Changing the README's visible layout means changing `render_stats`/`render_notable`/`render_updated`, not `README.md` itself.
-
-## `scripts/set_repository_policies.py`
-
-Uses the GitHub **REST** API. Destructive and account-wide - read it before running it. For every non-fork, non-archived repo it `PATCH`es: `has_wiki=false`, `has_projects=false`, `has_discussions=false`, and merge method to rebase-only (`allow_merge_commit=false`, `allow_squash_merge=false`, `allow_rebase_merge=true`). Then, for every fork, it **renames** the repo to `fork-<name>` unless already prefixed.
-
-Two things to know before editing it:
-
-- the `httpx.Client` (`api`) is constructed at *module import* time and reads `os.environ["GH_TOKEN"]` there, so importing the module without the env var raises immediately
-- `list_repositories()`/`list_forked_repositories()` call `GET /user/repos` with no pagination, so they only ever see the first page (~30 repos)
-
-## Code Conventions
-
-- Ruff `select = ["ALL"]` with only `CPY001`, `D`, `G004`, `INP001` ignored - assume nearly every rule applies. `fix = true` and `unsafe-fixes = true`, so `ruff check` rewrites code on every run; prefer `just format` over hand-restructuring
-- Isort is configured unusually: `force-single-line = true`, `from-first = false`, `length-sort-straight = true`, 2 blank lines after imports, 1 blank line between import types, and `from __future__ import annotations` is a `required-imports` entry in every module
-- Line length 100 (ruff), double-quoted strings, `docstring-code-format = true`. `.editorconfig` sets 4-space indent for Python (2 elsewhere) and a looser 120 guide - ruff's 100 wins
-- Module docstrings open with `Module that contains ...`. House style, not lint-enforced (`D` is ignored)
-- `G004` is ignored specifically so loguru f-string logging (`logger.info(f"...")`) is allowed - that is the established logging style here
-- Commits follow Angular conventional commits (`docs:`, `chore:`, `ci:`, `build(deps):`). PRs use `.github/PULL_REQUEST_TEMPLATE.md`. Repo labels are managed externally via Terraform, not in this repo
+Commit and branch conventions: see `CONTRIBUTING.md`.
