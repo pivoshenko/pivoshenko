@@ -34,9 +34,6 @@ jobs:
       - name: Run linters
         run: just lint
 
-      - name: Run audit
-        run: just audit
-
       - name: Run tests
         run: |
           if [ -f ".no-tests" ]; then

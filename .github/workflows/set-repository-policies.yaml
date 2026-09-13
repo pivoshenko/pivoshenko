@@ -37,4 +37,4 @@ jobs:
       - name: Apply repository policies
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: just policies
+        run: just set-repository-policies

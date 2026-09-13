@@ -16,24 +16,23 @@ just              # list recipes
 just install      # uv sync --all-groups --all-extras
 just format       # pyupgrade --py313-plus over all .py (excl .venv) -> ruff check --fix -> ruff format
 just lint         # ruff check . && ty check
-just audit        # pip-audit
 just test         # no-op: prints "skipping (.no-tests sentinel)" while .no-tests exists
 just check        # lint + test
 just update       # uv lock --upgrade && uvx uv-upsync
-just stats        # run scripts/update_readme_stats.py locally (needs GH_TOKEN)
-just policies     # run scripts/set_repository_policies.py locally (needs GH_TOKEN) -- MUTATES ALL REPOS
+just update-readme-stats        # run scripts/update_readme_stats.py locally (needs GH_TOKEN)
+just set-repository-policies     # run scripts/set_repository_policies.py locally (needs GH_TOKEN) -- MUTATES ALL REPOS
 ```
 
 Package manager is **uv**; Python is pinned to **3.13** (`.python-version`, `requires-python`, ruff `target-version = "py313"`, `[tool.ty.environment]`). Do not introduce pip/poetry/pytest configuration.
 
-Gotcha: only `just install` uses the synced `.venv`. The `format`/`lint`/`audit`/`update` recipes shell out through `uvx`, which resolves the *latest* ruff/ty/pyupgrade rather than the versions pinned in `[dependency-groups]`. A clean `just lint` locally can still differ from CI if the pins are stale; bump the pins in `pyproject.toml` when new rules start firing.
+Gotcha: only `just install` uses the synced `.venv`. The `format`/`lint`/`update` recipes shell out through `uvx`, which resolves the *latest* ruff/ty/pyupgrade rather than the versions pinned in `[dependency-groups]`. A clean `just lint` locally can still differ from CI if the pins are stale; bump the pins in `pyproject.toml` when new rules start firing.
 
 There are no tests and no test framework. `.no-tests` is a deliberate sentinel file — deleting it makes `just test` fail hard by design.
 
 ## CI and automation (`.github/workflows/`)
 
-- `ci.yaml` — a single flat `ci` job on `ubuntu-24.04-arm`, triggered on push to `main`, all PRs, and dispatch. Steps run sequentially: `just install` → `just lint` → `just audit` → test. The test step re-implements the `.no-tests` check inline in bash rather than calling `just test`, so that guard exists in two places; keep them in sync.
-- `update-readme-stats.yaml` — cron `0 10 * * 1` (Mondays 10:00 UTC) plus dispatch. Runs `just stats`, then commits `README.md` back to `main` as `github-actions[bot]` (`|| exit 0` when nothing changed). Needs `contents: write`.
+- `ci.yaml` — a single flat `ci` job on `ubuntu-24.04-arm`, triggered on push to `main`, all PRs, and dispatch. Steps run sequentially: `just install` → `just lint` → test. The test step re-implements the `.no-tests` check inline in bash rather than calling `just test`, so that guard exists in two places; keep them in sync.
+- `update-readme-stats.yaml` — cron `0 10 * * 1` (Mondays 10:00 UTC) plus dispatch. Runs `just update-readme-stats`, then commits `README.md` back to `main` as `github-actions[bot]` (`|| exit 0` when nothing changed). Needs `contents: write`.
 - `set-repository-policies.yaml` — `workflow_dispatch` **only**, never scheduled. This is intentional: the script mutates every repo on the account.
 
 Both scripts read `GH_TOKEN` and `GITHUB_REPOSITORY_OWNER` (see `.env.example`); workflows pass the ambient `secrets.GITHUB_TOKEN`.

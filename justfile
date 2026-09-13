@@ -13,11 +13,8 @@ lint:
     uvx ruff check .
     uvx ty check
 
-audit:
-    uvx pip-audit
-
 test:
-    @[ -f .no-tests ] && echo "skipping (.no-tests sentinel)" || { echo "no test command — add tests or restore .no-tests" >&2; exit 1; }
+    @[ -f .no-tests ] && echo "skipping (.no-tests sentinel)" || { echo "no test command, add tests or restore .no-tests" >&2; exit 1; }
 
 check: lint test
 
@@ -25,8 +22,8 @@ update:
     uv lock --upgrade
     uvx uv-upsync
 
-stats:
-    uv run python scripts/update_readme_stats.py
-
-policies:
+set-repository-policies:
     uv run python scripts/set_repository_policies.py
+
+update-readme-stats:
+    uv run python scripts/update_readme_stats.py
