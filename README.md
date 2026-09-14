@@ -11,8 +11,8 @@ Outside of work, I enjoy cycling and playing video games to unwind.
 <!-- STATS:START -->
 ## Stats
 
-- ⭐ Stars: **584**
-- 💻 Commits: **13.7k**
+- ⭐ Stars: **634**
+- 💻 Commits: **13.9k**
 - 🔀 Pull Requests: **107**
 - 🐛 Issues: **28**
 <!-- STATS:END -->
@@ -28,10 +28,10 @@ Outside of work, I enjoy cycling and playing video games to unwind.
 - [dotfiles/dotfiles.github.com](https://github.com/dotfiles/dotfiles.github.com) ⭐ 1.5k
 - [jnmcfly/awesome-startpage](https://github.com/jnmcfly/awesome-startpage) ⭐ 1.3k
 - [bradAGI/awesome-cli-coding-agents](https://github.com/bradAGI/awesome-cli-coding-agents) ⭐ 1.2k
-- [JackyST0/awesome-agent-skills](https://github.com/JackyST0/awesome-agent-skills) ⭐ 632
+- [JackyST0/awesome-agent-skills](https://github.com/JackyST0/awesome-agent-skills) ⭐ 635
 - [ZhaoUncle/Awesome-Homepage](https://github.com/ZhaoUncle/Awesome-Homepage) ⭐ 269
 <!-- NOTABLE:END -->
 
 <!-- UPDATED:START -->
-*Updated: 2026-09-07*
+*Updated: 2026-09-14*
 <!-- UPDATED:END -->
