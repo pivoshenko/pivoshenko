@@ -11,9 +11,9 @@ Outside of work, I enjoy cycling and playing video games to unwind.
 <!-- STATS:START -->
 ## Stats
 
-- ⭐ Stars: **653**
-- 💻 Commits: **14.2k**
-- 🔀 Pull Requests: **109**
+- ⭐ Stars: **659**
+- 💻 Commits: **14.3k**
+- 🔀 Pull Requests: **110**
 - 🐛 Issues: **28**
 <!-- STATS:END -->
 
@@ -22,16 +22,16 @@ Outside of work, I enjoy cycling and playing video games to unwind.
 
 - [withfig/autocomplete](https://github.com/withfig/autocomplete) ⭐ 25.2k
 - [dair-ai/AI-Papers-of-the-Week](https://github.com/dair-ai/AI-Papers-of-the-Week) ⭐ 13.2k
-- [SchemaStore/schemastore](https://github.com/SchemaStore/schemastore) ⭐ 3.8k
+- [SchemaStore/schemastore](https://github.com/SchemaStore/schemastore) ⭐ 3.9k
 - [Bogdanp/awesome-advent-of-code](https://github.com/Bogdanp/awesome-advent-of-code) ⭐ 3.2k
 - [facebookresearch/audio2photoreal](https://github.com/facebookresearch/audio2photoreal) ⭐ 2.8k
 - [dotfiles/dotfiles.github.com](https://github.com/dotfiles/dotfiles.github.com) ⭐ 1.5k
 - [jnmcfly/awesome-startpage](https://github.com/jnmcfly/awesome-startpage) ⭐ 1.3k
 - [bradAGI/awesome-cli-coding-agents](https://github.com/bradAGI/awesome-cli-coding-agents) ⭐ 1.3k
-- [JackyST0/awesome-agent-skills](https://github.com/JackyST0/awesome-agent-skills) ⭐ 641
+- [JackyST0/awesome-agent-skills](https://github.com/JackyST0/awesome-agent-skills) ⭐ 644
 - [ZhaoUncle/Awesome-Homepage](https://github.com/ZhaoUncle/Awesome-Homepage) ⭐ 269
 <!-- NOTABLE:END -->
 
 <!-- UPDATED:START -->
-*Updated: 2026-09-21*
+*Updated: 2026-09-28*
 <!-- UPDATED:END -->
