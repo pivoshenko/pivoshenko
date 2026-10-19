@@ -11,10 +11,10 @@ Outside of work, I enjoy cycling and playing video games to unwind.
 <!-- STATS:START -->
 ## Stats
 
-- ⭐ Stars: **675**
-- 💻 Commits: **16.3k**
-- 🔀 Pull Requests: **112**
-- 🐛 Issues: **30**
+- ⭐ Stars: **677**
+- 💻 Commits: **16.7k**
+- 🔀 Pull Requests: **117**
+- 🐛 Issues: **31**
 <!-- STATS:END -->
 
 <!-- NOTABLE:START -->
@@ -26,12 +26,12 @@ Outside of work, I enjoy cycling and playing video games to unwind.
 - [Bogdanp/awesome-advent-of-code](https://github.com/Bogdanp/awesome-advent-of-code) ⭐ 3.2k
 - [facebookresearch/audio2photoreal](https://github.com/facebookresearch/audio2photoreal) ⭐ 2.8k
 - [dotfiles/dotfiles.github.com](https://github.com/dotfiles/dotfiles.github.com) ⭐ 1.5k
-- [bradAGI/awesome-cli-coding-agents](https://github.com/bradAGI/awesome-cli-coding-agents) ⭐ 1.3k
+- [bradAGI/awesome-cli-coding-agents](https://github.com/bradAGI/awesome-cli-coding-agents) ⭐ 1.4k
 - [jnmcfly/awesome-startpage](https://github.com/jnmcfly/awesome-startpage) ⭐ 1.3k
 - [JackyST0/awesome-agent-skills](https://github.com/JackyST0/awesome-agent-skills) ⭐ 652
 - [ZhaoUncle/Awesome-Homepage](https://github.com/ZhaoUncle/Awesome-Homepage) ⭐ 271
 <!-- NOTABLE:END -->
 
 <!-- UPDATED:START -->
-*Updated: 2026-10-12*
+*Updated: 2026-10-19*
 <!-- UPDATED:END -->
