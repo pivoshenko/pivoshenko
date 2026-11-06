@@ -5,7 +5,7 @@
 - **`scripts/set_repository_policies.py` is a live, irreversible, account-wide mutation.** It touches other repositories, not this one, and renaming a fork changes its URL. Its workflow is `workflow_dispatch`-only for that reason. Do not run it to "test a change" - if you modify it, reason about the diff rather than executing it
 - **The marker regions in `README.md` are generated. Do not hand-edit them** - the next scheduled run silently overwrites your changes. To change what appears there, edit the `render_*` functions in `scripts/update_readme_stats.py`. The markers themselves must stay exactly as written; `update_readme` matches them with `re.sub`, and a missing marker means that section is silently skipped, not an error. The README's prose outside the markers is hand-written and safe to edit
 - **`.env` holds a real token.** It is gitignored - never read it into output, echo it, or commit it
-- **`just lint` mutates files despite its name.** `[tool.ruff]` sets `fix = true` and `unsafe-fixes = true`, which apply to every `ruff check` invocation, including the one inside `lint`. Use `uvx ruff check --no-fix .` when you want a pure verification pass
+- **`just lint` mutates files despite its name.** `[tool.ruff]` sets `fix = true` and `unsafe-fixes = true`, which apply to every `ruff check` invocation, including the one inside `lint`. Use `uv run ruff check --no-fix .` when you want a pure verification pass
 
 ## What This Repo Is
 
@@ -20,7 +20,7 @@ There is no application, library, or package to import. `pyproject.toml` declare
 
 `just --list` for the full set, `CONTRIBUTING.md` for what each recipe and workflow does. What neither tells you:
 
-- linters and formatters run via `uvx`, not from the project venv. The `formatters` and `linters` dependency groups exist so the versions are pinned and lockable, but the recipes invoke ephemeral `uvx` tools. `just install` is only needed for the scripts' own runtime deps
+- linters and formatters run from the project venv via `uv run`, so the versions pinned in the `formatters` and `linters` dependency groups are the ones that run. Run `just install` first
 - `.no-tests` is a sentinel, not a config file. Deleting it makes `just test` and CI fail until a real test command is wired into the `test` recipe. Add tests and the recipe together, or leave it alone
 - both scripts read `GITHUB_REPOSITORY_OWNER` and `GH_TOKEN` (see `.env.example`); in Actions `GH_TOKEN` is the auto-provided `secrets.GITHUB_TOKEN`
 
