@@ -5,7 +5,7 @@ from __future__ import annotations
 import os
 import re
 import pathlib
-import datetime
+import datetime as dt
 import dataclasses
 
 import httpx
@@ -80,7 +80,7 @@ def fetch_stars(client: httpx.Client, username: str) -> int:
 def fetch_account_year(client: httpx.Client, username: str) -> int:
     query = "query($login: String!) { user(login: $login) { createdAt } }"
     data = graphql(client, query, {"login": username})
-    return datetime.datetime.fromisoformat(data["user"]["createdAt"]).year
+    return dt.datetime.fromisoformat(data["user"]["createdAt"]).year
 
 
 def fetch_commits(client: httpx.Client, username: str) -> int:
@@ -96,7 +96,7 @@ def fetch_commits(client: httpx.Client, username: str) -> int:
     """
     total = 0
     start_year = fetch_account_year(client, username)
-    current_year = datetime.datetime.now(datetime.UTC).year
+    current_year = dt.datetime.now(dt.UTC).year
 
     for year in range(start_year, current_year + 1):
         data = graphql(
@@ -225,7 +225,7 @@ def render_notable(contributions: list[dict]) -> str:
 
 
 def render_updated() -> str:
-    updated = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d")
+    updated = dt.datetime.now(dt.UTC).strftime("%Y-%m-%d")
     return f"*Updated: {updated}*"
 
 
