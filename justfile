@@ -19,7 +19,7 @@ check: lint test
 
 update:
     uv lock --upgrade
-    uvx uv-upsync
+    uv run uv-upsync
 
 set-repository-policies:
     uv run python scripts/set_repository_policies.py
