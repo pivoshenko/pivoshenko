@@ -12,6 +12,9 @@ lint:
     uv run ruff check .
     uv run ty check .
 
+audit:
+    uv audit --preview-features audit-command
+
 test:
     @[ -f .no-tests ] && echo "skipping (.no-tests sentinel)" || { echo "no test command, add tests or restore .no-tests" >&2; exit 1; }
 
