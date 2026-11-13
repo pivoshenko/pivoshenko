@@ -1,6 +1,6 @@
 ## 👋 Hello There!
 
-Hi, I'm **Volodymyr** - Principal Engineer, AI & Machine Learning, fascinated by system design and software development.
+Principal Engineer, AI & Machine Learning, fascinated by system design and software development.
 
 In my current role, I own the architecture of an AI/ML platform behind 30+ production models and lead the R&D team, staying hands-on with design and implementation. Most of my work comes down to turning rough ideas into working solutions and keeping engineering decisions practical and scalable.
 
