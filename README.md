@@ -1,12 +1,10 @@
 ## 👋 Hello There!
 
-Hello, I'm **Volodymyr** - Principal AI/ML R&D Engineer fascinated by AI, system design, and software development.
+Hi, I'm **Volodymyr** - Principal Engineer, AI & Machine Learning, fascinated by system design and software development.
 
-In my current role, I lead the R&D team and work hands-on with architecture and implementation. I help turn rough ideas into working solutions and keep engineering decisions practical and scalable.
+In my current role, I own the architecture of an AI/ML platform behind 30+ production models and lead the R&D team, staying hands-on with design and implementation. Most of my work comes down to turning rough ideas into working solutions and keeping engineering decisions practical and scalable.
 
-In my spare time, I build side projects and contribute to open source. It is my space to experiment with new tools and architectures, explore ideas, and collaborate with people who care about making things well.
-
-Outside of work, I enjoy cycling and playing video games to unwind.
+Side projects and open source are where I experiment with new tools and explore ideas. Outside of work, I enjoy cycling and playing video games to unwind.
 
 <!-- STATS:START -->
 ## Stats
