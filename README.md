@@ -2,9 +2,9 @@
 
 Principal Engineer, AI & Machine Learning - fascinated by system design and software development.
 
-In my current role, I own the architecture of an AI/ML platform behind 30+ production models and lead the R&D team, staying hands-on with design and implementation. Most of my work comes down to turning rough ideas into working solutions and keeping engineering decisions practical and scalable.
+For 7+ years I've built production ML and agentic systems for user engagement, personalisation and retention. Today I own the architecture of an AI/ML platform behind 30+ production models and lead an R&D team, staying hands-on with design and implementation. Much of my work is turning ideas into scalable solutions and shaping AI and engineering culture across the organisation.
 
-Side projects and open source are where I experiment with new tools and explore ideas. Outside of work, I enjoy cycling and playing video games to unwind.
+Outside of work, I enjoy cycling and playing video games to unwind.
 
 <!-- STATS:START -->
 ## Stats
