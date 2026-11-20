@@ -88,7 +88,7 @@ Workflows live in `.github/workflows`:
 
 | Workflow | Trigger | What it does |
 | --- | --- | --- |
-| CI | Push to `main`, pull requests, `workflow_dispatch` | Single `ci` job on `ubuntu-24.04-arm`; installs the dependencies with uv on Python 3.14, then lints the project and runs the test step, which no-ops while the `.no-tests` sentinel file is present |
+| CI | Push to `main`, pull requests, `workflow_dispatch` | `ci` runs on `ubuntu-24.04-arm`; installs the dependencies with uv on Python 3.14, then lints the project, runs `just audit` (uv) and runs the test step, which no-ops while the `.no-tests` sentinel file is present |
 | Set Repository Policies | `workflow_dispatch` | Single `set-repository-policies` job on `ubuntu-latest`; installs the dependencies with uv on Python 3.14, then applies the standard settings across every repository on the account using the Actions `GH_TOKEN` |
 | Update README Stats | Weekly cron (Mondays at 10:00 UTC), `workflow_dispatch` | Single `update-stats` job on `ubuntu-latest`; installs the dependencies with uv on Python 3.14, refreshes the stats section of `README.md` using the Actions `GH_TOKEN`, then commits and pushes the result when it changed |
 
